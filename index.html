@@ -10,7 +10,7 @@
       <a class="header-logo">DEVICE</a>
       <input class="site-search">
       <!--Я так понимаю, тут нужно будет как-то сложно играться с псевдоклассами-->
-      <a class=button-search" href="#">Найти</a>
+      <a class="button-search" href="#">Найти</a>
       <a class="login" href="#">Войти</a>
       <a class="compare" href="#">Сравнить</a>
       <a class="basket" href="#">Корзина</a>
@@ -148,14 +148,14 @@
         </ul>
         <a class="button" href="#">Подробнее о нас</a>
       </section>
-      <a class="contacts">
+      <section class="contacts">
         <h2>Контакты</h2>
         <p>
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
         <!--Я так понимаю, тут лучше использовать button?-->
         <a href="#map-popup"><img src="img/map.jpg" alt="Как нас найти" width="560" height="222"></a>
-        <a class="button"href="#write-us">Напишите нам</a>
+        <a class="button" href="#write-us">Напишите нам</a>
       </section>
     </main>
     <footer class="main-footer">
@@ -179,12 +179,15 @@
       </ul>
       <a class="footer-copyright" href="https://htmlacademy.ru">HTML Academy</a>
     </footer>
-    <section class="write-us" id="write-us">
+    <section class="white-us" id="white-us">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <!--Тут будет форма (будет в следующих лекциях, тогда и сделаю, что бы больше понимания было)-->
+    </section>
       <span class="close-button">x</span>
     <section class="map-popup" id="map-popup">
+      <h2 class="visually-hidden">Как нас найти</h2>
       <!--Тут будет карта (Не совсем понял, как ее нужно реализовать в допютребованиях, о каком слое map-hover идет речь-->
       <span class="close-button">x</span>
-  </section>
+    </section>
   </body>
 </html>
