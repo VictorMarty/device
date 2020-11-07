@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru">
+  <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
     <title>Магазин современной техники Девайс</title>
   </head>
   <body>
     <header class="main-header">
-      <h1 class="visually-hidden">Магазин Девайс</h1>
-      <a class="header-logo">DEVICE</a>
-      <input class="site-search">
-      <!--Я так понимаю, тут нужно будет как-то сложно играться с псевдоклассами-->
-      <a class="button-search" href="#">Найти</a>
-      <a class="login" href="#">Войти</a>
-      <a class="compare" href="#">Сравнить</a>
-      <a class="basket" href="#">Корзина</a>
-      <section class="section-catalog">
-        <h2>Каталог товаров</h2>
-        <ul class="catalog-menu">
-          <li class="catalog-category">Виртуальная реальность</li>
-          <li class="catalog-category">Моноподы для селфи</li>
-          <li class="catalog-category">Экшн-камеры</li>
-          <li class="catalog-category">Фитнес-браслеты</li>
-          <li class="catalog-category">Умные часы</li>
-          <li class="catalog-category">Квадрокоптеры</li>
-        </ul>
-      </section>
+      <h1 class="main-header__title visually-hidden">Магазин Девайс</h1>
+      <a class="header-logo" href="#">DEVICE</a>
+      <form class="site-search">
+        <input class="site-search__input">
+        <button class="site-search__button">Найти</button>
+      </form>
+      <ul class="user-navigation">
+        <li class="user-navigation__login-link"><a href="#">Войти</a></li>
+        <li class="user-navigation__compare-link"><a href="#">Сравнить</a></li>
+        <li class="user-navigation__basket-link"><a href="#">Корзина</a></li>
+      </ul>
       <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+        <ul class="main-nav__list">
+          <li class="main-nav__item catalog-categories">
+            <h2 class="catalog-categories__title">Каталог товаров</h2>
+            <ul class="catalog-categories__list">
+              <li class="catalog-categories__category"><a href="#">Виртуальная реальность</a></li>
+              <li class="catalog-categories__category"><a href="#">Моноподы для селфи</a></li>
+              <li class="catalog-categories__category"><a href="#">Экшн-камеры</a></li>
+              <li class="catalog-categories__category"><a href="#">Фитнес-браслеты</a></li>
+              <li class="catalog-categories__category"><a href="#">Умные часы</a></li>
+              <li class="catalog-categories__category"><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Гарантия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="container">
       <section class="promo">
-        <h2 class="visually-hidden">Промо товары</h2>
-        <ol class="promo-slider">
-          <li class="promo-item">
-            <img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
-            <span class="promo-lead">Делай селфи, <br>как Бен Стиллер!</span>
-            <p class="button">
+        <h2 class="promo__title visually-hidden">Промо товары</h2>
+        <ol class="promo-list">
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
+            <span class="promo-item__lead">Делай селфи, <br>как Бен Стиллер!</span>
+            <p class="promo-item__description">
               Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
-            <a class="promo-details" href="#">Подробнее</a>
-            <table class="promo-specification">
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification">
               <tr>
                 <td>8,5 м</td>
                 <td>5 кг</td>
@@ -57,14 +67,14 @@
               </tr>
             </table>
           </li>
-          <li class="promo-item">
-            <img src="img/slider-2.png" width="385" height="485" alt="Фитнес-браслет">
-            <span class="promo-lead">Худеем <br>правильно!</span>
-            <p class="promo-description">
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-2.png" width="385" height="485" alt="Фитнес-браслет">
+            <span class="promo-item__lead">Худеем <br>правильно!</span>
+            <p class="promo-item__description">
               Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <table class="promo-specification">
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification">
               <tr>
                 <td>48 часов</td>
               </tr>
@@ -73,14 +83,14 @@
               </tr>
             </table>
           </li>
-          <li class="promo-item">
-            <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
-            <span class="promo-lead">Порхает как бабочка, <br>жалит как пчела!</span>
-            <p class="promo-description">
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            <span class="promo-item__lead">Порхает как бабочка, <br>жалит как пчела!</span>
+            <p class="promo-item__description">
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <table class="promo-specification">
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification">
               <tr>
                 <td>800 метров</td>
                 <td>50 м</td>
@@ -94,100 +104,91 @@
         </ol>
       </section>
       <section class="popular">
-        <h2 class="visually-hidden">Популярные группы товаров</h2>
-        <ul class="popular-items">
-          <!-- Тут сразу пытаюсь понять, как классифицировать элементы,
-          так как в конце нужно будет всевдоэлементом добавлять к каждому svg изображение. Так и назвал классы по названию изображений.Нужно разъяснение МЕНТОРА :) -->
-          <li class="popular-item-1"><a href="#">Виртуальная реальность</a></li>
-          <li class="popular-item-2"><a href="#">Моноподы для селфи</a> </li>
-          <li class="popular-item-3"><a href="#">Экшн-камеры</a></li>
-          <li class="popular-item-4"><a href="#">Фитнес-браслеты</a></li>
-          <li class="popular-item-5"><a href="#">Умные часы</a></li>
-          <li class="popular-item-6"><a href="#">Квадрокоптеры</a></li>
+        <h2 class="popular__title visually-hidden">Популярные группы товаров</h2>
+        <ul class="popular__list popular-list">
+          <li class="popular-list__item"><a class="popular-list__link link-VR" href="#">Виртуальная реальность</a></li>
+          <li class="popular-list__item"><a class="popular-list__link link-selfie" href="#">Моноподы для селфи</a> </li>
+          <li class="popular-list__item"><a class="popular-list__link link-action-camera" href="#">Экшн-камеры</a></li>
+          <li class="popular-list__item"><a class="popular-list__link link-fitness" href="#">Фитнес-браслеты</a></li>
+          <li class="popular-list__item"><a class="popular-list__link link-smart-watch" href="#">Умные часы</a></li>
+          <li class="popular-list__item"><a class="popular-list__link link-quadrocopter" href="#">Квадрокоптеры</a></li>
         </ul>
       </section>
       <section class="services">
-        <h2 class="visually-hidden">Услуги</h2>
-        <!--Тоже самое, что и со списком выше, не совсем понимаю, как лучше описывать классы в этом разделе. Описываю также по названию изображений-->
-        <ul class="services-slider">
-          <li class="service-delivery">
-            <h3 class="service-name">Доставка</h3>
-            <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <h2 class="services__title visually-hidden">Услуги</h2>
+        <ul class="service__list service-list">
+          <li class="service-list__item service-list-item delivery">
+            <h3 class="service-list-item__name">Доставка</h3>
+            <p class="service-list-item__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="service-warranty">
+          <li class="service-list__item service-list-item warranty">
             <h3 class="service-name">Гарантия</h3>
             <p class="service-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="service-credit">
-            <h3 class="service-name">Кредит</h3>
-            <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <li class="service-list__item service-list-item credit">
+            <h3 class="service-list-item__name">Кредит</h3>
+            <p class="service-list-item__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
         </ul>
       </section>
       <section class="logotypes">
-        <h2 class="visually-hidden">Логотипы брендов</h2>
-        <ul class="logotypes-items">
-          <li><img src="img/logo-1.jpg" alt="dji" width="260" height="100"></li>
-          <li><img src="img/logo-2.jpg" alt="SP Gardets" width="260" height="100"></li>
-          <li><img src="img/logo-3.jpg" alt="GoPro" width="260" height="100"></li>
-          <li><img src="img/logo-4.jpg" alt="vive" width="260" height="100"></li>
+        <h2 class="logotypes__title visually-hidden">Логотипы брендов</h2>
+        <ul class="logotypes__list">
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-1.jpg" alt="dji" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-2.jpg" alt="SP Gardets" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-3.jpg" alt="GoPro" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-4.jpg" alt="vive" width="260" height="100"></li>
         </ul>
       </section>
       <section class="info">
-        <h2>О нас</h2>
-        <p>
+        <h2 class="info__title">О нас</h2>
+        <p class="info__paragraph">
           Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
         </p>
-        <p>
+        <p class="info__paragraph">
           Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
         </p>
-        <ul class="logistic-items">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
+        <ul class="info__logistic-list logistic-list">
+          <li class="logistic-list__item">Деловые линии</li>
+          <li class="logistic-list__item">Автотрейдинг</li>
+          <li class="logistic-list__item">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="#">Подробнее о нас</a>
+        <a class="info__link-details" href="#">Подробнее о нас</a>
       </section>
       <section class="contacts">
-        <h2>Контакты</h2>
-        <p>
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__paragraph">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <!--Я так понимаю, тут лучше использовать button?-->
-        <a href="#map-popup"><img src="img/map.jpg" alt="Как нас найти" width="560" height="222"></a>
-        <a class="button" href="#write-us">Напишите нам</a>
+        <a class="contacts__link-map" href="#map-popup"><img class="contacts__image-map" src="img/map.jpg" alt="Как нас найти" width="560" height="222"></a>
+        <a class="contacts__button" href="#write-us">Напишите нам</a>
       </section>
     </main>
     <footer class="main-footer">
       <span class="footer-logo">DEVICE</span>
-      <a class="login" href="#">Войти</a>
-      <a class="compare" href="#">Сравнить</a>
-      <a class="basket" href="#">Корзина</a>
+      <ul class="footer-user-navigation">
+        <li class="footer-user-navigation__login-link"><a href="#">Войти</a></li>
+        <li class="footer-user-navigation__compare-link"><a href="#">Сравнить</a></li>
+        <li class="footer-user-navigation__basket-link"><a href="#">Корзина</a></li>
+      </ul>
       <span class="footer-address">г. Москва, ул. Строителей, 15</span>
-      <nav class="footer-nav">
-        <ul class="footer-nav-list">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
       <a class="footer-telephone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
-      <ul class="footer-social">
-        <li><a href="#" class="social-button">Facebook</a></li>
-        <li><a href="#" class="social-button">Instagram</a></li>
-        <li><a href="#" class="social-button">Twitter</a></li>
+      <ul class="footer-social-list">
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link facebook">Facebook</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link instagram">Instagram</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link twitter">Twitter</a></li>
       </ul>
       <a class="footer-copyright" href="https://htmlacademy.ru">HTML Academy</a>
     </footer>
     <section class="white-us" id="white-us">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <h2 class="white-us__title visually-hidden">Форма обратной связи</h2>
       <!--Тут будет форма (будет в следующих лекциях, тогда и сделаю, что бы больше понимания было)-->
     </section>
-      <span class="close-button">x</span>
+      <span class="white-us__button close-button">x</span>
     <section class="map-popup" id="map-popup">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <!--Тут будет карта (Не совсем понял, как ее нужно реализовать в допютребованиях, о каком слое map-hover идет речь-->
-      <span class="close-button">x</span>
+      <h2 class="map-popup__title visually-hidden">Как нас найти</h2>
+      <!--Тут будет карта (Не совсем понял, как ее нужно реализовать в доп.требованиях, о каком слое map-hover идет речь-->
+      <span class="map-popup__button close-button">x</span>
     </section>
   </body>
 </html>
