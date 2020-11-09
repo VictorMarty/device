@@ -1,9 +1,194 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-	<meta charset="utf-8">
-		<title>HTML Academy: Девайс</title>
-	</head>
-	<body>
-		<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-	</body>
+<html lang="ru">
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+    <title>Магазин современной техники Девайс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-header__title visually-hidden">Магазин Девайс</h1>
+      <a class="header-logo" href="#">DEVICE</a>
+      <form class="site-search">
+        <input class="site-search__input">
+        <button class="site-search__button">Найти</button>
+      </form>
+      <ul class="user-navigation">
+        <li class="user-navigation__item"><a class="user-navigation__link user-navigation__link--login" href="#">Войти</a></li>
+        <li class="user-navigation__item"><a class="user-navigation__link user-navigation__link--compare" href="#">Сравнить</a></li>
+        <li class="user-navigation__item"><a class="user-navigation__link user-navigation__link--basket" href="#">Корзина</a></li>
+      </ul>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item catalog-categories">
+            <a class="main-nav__link catalog-categories__title" href="#">Каталог товаров</a>
+            <ul class="catalog-categories__list">
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Виртуальная реальность</a></li>
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Моноподы для селфи</a></li>
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Экшн-камеры</a></li>
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Фитнес-браслеты</a></li>
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Умные часы</a></li>
+              <li class="catalog-categories__category"><a class="catalog-categories__link" href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Гарантия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="promo">
+        <h2 class="promo__title visually-hidden">Промо товары</h2>
+        <ol class="promo-list">
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
+            <span class="promo-item__lead">Делай селфи, <br>как Бен Стиллер!</span>
+            <p class="promo-item__description">
+              Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+            </p>
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification specification-table">
+              <tr class="specification-table__row-values">
+                <td class="specification-table__cell">8,5 м</td>
+                <td class="specification-table__cell">5 кг</td>
+                <td class="specification-table__cell">Карбон</td>
+              </tr>
+              <tr class="specification-table__row-descriptions">
+                <td class="specification-table__cell">Длина палки</td>
+                <td class="specification-table__cell">Вес палки</td>
+                <td class="specification-table__cell">Материал</td>
+              </tr>
+            </table>
+          </li>
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-2.png" width="385" height="485" alt="Фитнес-браслет">
+            <span class="promo-item__lead">Худеем <br>правильно!</span>
+            <p class="promo-item__description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+            </p>
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification specification-table">
+              <tr class="specification-table__row-values">
+                <td class="specification-table__cell">48 часов</td>
+              </tr>
+              <tr class="specification-table__row-descriptions">
+                <td class="specification-table__cell">Без подзарядки</td>
+              </tr>
+            </table>
+          </li>
+          <li class="promo-list__item promo-item">
+            <img class="promo-item__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            <span class="promo-item__lead">Порхает как бабочка, <br>жалит как пчела!</span>
+            <p class="promo-item__description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+            </p>
+            <a class="promo-item__link-details" href="#">Подробнее</a>
+            <table class="promo-item__specification specification-table">
+              <tr class="specification-table__row-values">
+                <td class="specification-table__cell">800 метров</td>
+                <td class="specification-table__cell">50 м</td>
+              </tr>
+              <tr class="specification-table__row-values">
+                <td class="specification-table__cell">Дальность полета</td>
+                <td class="specification-table__cell">Радиус поражения</td>
+              </tr>
+            </table>
+          </li>
+        </ol>
+      </section>
+      <section class="popular">
+        <h2 class="popular__title visually-hidden">Популярные группы товаров</h2>
+        <ul class="popular__list popular-list">
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--VR" href="#">Виртуальная реальность</a></li>
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--selfie" href="#">Моноподы для селфи</a> </li>
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--action-camera" href="#">Экшн-камеры</a></li>
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--fitness" href="#">Фитнес-браслеты</a></li>
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--smart-watch" href="#">Умные часы</a></li>
+          <li class="popular-list__item"><a class="popular-list__link popular-list__link--quadrocopter" href="#">Квадрокоптеры</a></li>
+        </ul>
+      </section>
+      <section class="services">
+        <h2 class="services__title visually-hidden">Услуги</h2>
+        <ul class="services__list services-list">
+          <li class="services-list__item services-list-item services-list-item--delivery">
+            <h3 class="services-list-item__name">Доставка</h3>
+            <p class="services-list-item__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="services-list__item services-list-item services-list-item--warranty">
+            <h3 class="services-name">Гарантия</h3>
+            <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </li>
+          <li class="services-list__item services-list-item services-list-item--credit">
+            <h3 class="services-list-item__name">Кредит</h3>
+            <p class="services-list-item__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="logotypes">
+        <h2 class="logotypes__title visually-hidden">Логотипы брендов</h2>
+        <ul class="logotypes__list">
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-1.jpg" alt="dji" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-2.jpg" alt="SP Gardets" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-3.jpg" alt="GoPro" width="260" height="100"></li>
+          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-4.jpg" alt="vive" width="260" height="100"></li>
+        </ul>
+      </section>
+      <section class="info">
+        <h2 class="info__title">О нас</h2>
+        <p class="info__paragraph">
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p class="info__paragraph">
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="info__logistic-list logistic-list">
+          <li class="logistic-list__item">Деловые линии</li>
+          <li class="logistic-list__item">Автотрейдинг</li>
+          <li class="logistic-list__item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="info__link-details" href="#">Подробнее о нас</a>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__paragraph">
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <a class="contacts__link-map" href="#map-popup"><img class="contacts__image-map" src="img/map.jpg" alt="Как нас найти" width="560" height="222"></a>
+        <a class="contacts__button" href="#write-us">Напишите нам</a>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <span class="footer-logo">DEVICE</span>
+      <ul class="footer-user-navigation">
+        <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--login" href="#">Войти</a></li>
+        <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--compare" href="#">Сравнить</a></li>
+        <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--basket" href="#">Корзина</a></li>
+      </ul>
+      <span class="footer-address">г. Москва, ул. Строителей, 15</span>
+      <a class="footer-telephone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
+      <ul class="footer-social-list">
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--facebook">Facebook</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--instagram">Instagram</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--twitter">Twitter</a></li>
+      </ul>
+      <a class="footer-copyright" href="https://htmlacademy.ru">HTML Academy</a>
+    </footer>
+    <section class="white-us" id="white-us">
+      <h2 class="white-us__title visually-hidden">Форма обратной связи</h2>
+      <!--Тут будет форма (будет в следующих лекциях, тогда и сделаю, что бы больше понимания было)-->
+      <span class="white-us__button white-us__button--close-button">x</span>
+    </section>
+    <section class="map-popup" id="map-popup">
+      <h2 class="map-popup__title visually-hidden">Как нас найти</h2>
+      <!--Тут будет карта (Не совсем понял, как ее нужно реализовать в доп.требованиях, о каком слое map-hover идет речь-->
+      <span class="map-popup__button map-popup__button--close-button">x</span>
+    </section>
+  </body>
 </html>
