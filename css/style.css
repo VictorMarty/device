@@ -174,23 +174,23 @@ a {
 }
 
 .wrapper-promo__slider {
-	background-color: #ddd;
-	height: inherit;
-	overflow: hidden;
-	position: relative;
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  background-color: #ddd;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
 /* Убираем радиокнопки */
 .wrapper-promo > input {
-	display: none;
+  display: none;
 }
 
 /* Общий стиль слайда и каждый в отдельности */
 .promo-item {
-	height: inherit;
-	position: absolute;
-	width: inherit;
+  height: inherit;
+  position: absolute;
+  width: inherit;
 }
 
 /* Оформление лэйблов */
@@ -201,38 +201,38 @@ a {
 }
 
 .wrapper-promo label {
-	cursor: pointer;
-	display: inline-block;
-	height: 8px;
-	margin: 45px 50px 0 16px;
-	position: relative;
-	width: 8px;
-	border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 45px 50px 0 16px;
+  position: relative;
+  width: 8px;
+  border-radius: 50%;
 }
 
 .wrapper-promo label:after {
-	border: 2px solid #ddd;
-	content: " ";
-	display: block;
-	height: 12px;
-	left: -4px;
-	position: absolute;
-	top: -4px;
-	width: 12px;
-	border-radius: 50%;
+  border: 2px solid #ddd;
+  content: " ";
+  display: block;
+  height: 12px;
+  left: -4px;
+  position: absolute;
+  top: -4px;
+  width: 12px;
+  border-radius: 50%;
 }
 
 /* Переключение собственных кнопок */
 
 .wrapper-promo label {
-	cursor: pointer;
-	display: inline-block;
-	height: 8px;
-	margin: 25px 12px 0 16px;
-	position: relative;
-	width: 8px;
-	border-radius: 50%;
-	transition: background ease-in-out 0.5s;
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 25px 12px 0 16px;
+  position: relative;
+  width: 8px;
+  border-radius: 50%;
+  transition: background ease-in-out 0.5s;
 }
 
 .wrapper-promo label:hover,
@@ -244,19 +244,58 @@ a {
 }
 /* Переключение слайдеров */
 .promo-item {
-	height: inherit;
-	opacity: 0;
-	position: absolute;
-	width: inherit;
-	z-index: 0;
-	transform: scale(1.5);
-	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+  height: inherit;
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+  z-index: 0;
+
 }
 
 .wrapper-promo__radio--1:checked ~ .promo-list > .wrapper-promo__slide--1,
 .wrapper-promo__radio--2:checked ~ .promo-list > .wrapper-promo__slide--2,
 .wrapper-promo__radio--3:checked ~ .promo-list > .wrapper-promo__slide--3 {
-	opacity: 1;
-	z-index: 1;
-	transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.popular-list {
+  list-style: none;
+}
+
+.popular-list__link::before {
+  display: inline-block;
+  content: "";
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+}
+
+ .popular-list__link--VR::before{
+  content: "";
+  background-image: url("..\\img\\popular-1.svg");
+}
+.popular-list__link--selfie::before{
+  content: "";
+  background-image: url("..\\img\\popular-2.svg");
+}
+.popular-list__link--action-camera::before{
+  content: "";
+  background-image: url("..\\img\\popular-3.svg");
+}
+.popular-list__link--fitness::before{
+  content: "";
+  background-image: url("..\\img\\popular-4.svg");
+}
+.popular-list__link--smart-watch::before{
+  content: "";
+  background-image: url("..\\img\\popular-5.svg");
+}
+.popular-list__link--quadrocopter::before{
+  content: "";
+  background-image: url("..\\img\\popular-6.svg");
 }
