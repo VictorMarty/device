@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet" >
+  <link href="css/style.css" rel="stylesheet" >
     <title>Магазин современной техники Девайс</title>
   </head>
   <body>
@@ -46,65 +48,85 @@
       </nav>
     </header>
     <main class="container">
+
+
+
       <section class="promo">
         <h2 class="promo__title visually-hidden">Промо товары</h2>
-        <ol class="promo-list">
-          <li class="promo-list__item promo-item">
-            <img class="promo-item__img" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
-            <span class="promo-item__lead">Делай селфи, <br>как Бен Стиллер!</span>
-            <p class="promo-item__description">
-              Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-            </p>
-            <a class="promo-item__link-details button" href="#">Подробнее</a>
-            <table class="promo-item__specification specification-table">
-              <tr class="specification-table__row-values">
-                <td class="specification-table__cell">8,5 м</td>
-                <td class="specification-table__cell">5 кг</td>
-                <td class="specification-table__cell">Карбон</td>
-              </tr>
-              <tr class="specification-table__row-descriptions">
-                <td class="specification-table__cell">Длина палки</td>
-                <td class="specification-table__cell">Вес палки</td>
-                <td class="specification-table__cell">Материал</td>
-              </tr>
-            </table>
-          </li>
-          <li class="promo-list__item promo-item">
-            <img class="promo-item__img" src="img/slider-2.png" width="385" height="485" alt="Фитнес-браслет">
-            <span class="promo-item__lead">Худеем <br>правильно!</span>
-            <p class="promo-item__description">
-              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-            </p>
-            <a class="promo-item__link-details button" href="#">Подробнее</a>
-            <table class="promo-item__specification specification-table">
-              <tr class="specification-table__row-values">
-                <td class="specification-table__cell">48 часов</td>
-              </tr>
-              <tr class="specification-table__row-descriptions">
-                <td class="specification-table__cell">Без подзарядки</td>
-              </tr>
-            </table>
-          </li>
-          <li class="promo-list__item promo-item">
-            <img class="promo-item__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
-            <span class="promo-item__lead">Порхает как бабочка, <br>жалит как пчела!</span>
-            <p class="promo-item__description">
-              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-            </p>
-            <a class="promo-item__link-details button" href="#">Подробнее</a>
-            <table class="promo-item__specification specification-table">
-              <tr class="specification-table__row-values">
-                <td class="specification-table__cell">800 метров</td>
-                <td class="specification-table__cell">50 м</td>
-              </tr>
-              <tr class="specification-table__row-values">
-                <td class="specification-table__cell">Дальность полета</td>
-                <td class="specification-table__cell">Радиус поражения</td>
-              </tr>
-            </table>
-          </li>
-        </ol>
+        <div class="wrapper-promo">
+          <input type="radio" name="wrapper-promo__radiobutton" id="slide1" class="wrapper-promo__radio--1" >
+          <input type="radio" name="wrapper-promo__radiobutton" id="slide2" class="wrapper-promo__radio--2" checked>
+          <input type="radio" name="wrapper-promo__radiobutton" id="slide3" class="wrapper-promo__radio--3">
+          <ol class="wrapper-promo__slider promo-list">
+            <li class="promo-list__item wrapper-promo__slide--1 promo-item">
+              <img class="promo-item__img" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
+              <span class="promo-item__index">01</span>
+              <span class="promo-item__lead">Делай селфи, <br>как Бен Стиллер!</span>
+              <p class="promo-item__description">
+                Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              </p>
+              <a class="promo-item__link-details button" href="#">Подробнее</a>
+              <table class="promo-item__specification specification-table">
+                <tr class="specification-table__row-values">
+                  <td class="specification-table__cell">8,5 м</td>
+                  <td class="specification-table__cell">5 кг</td>
+                  <td class="specification-table__cell">Карбон</td>
+                </tr>
+                <tr class="specification-table__row-descriptions">
+                  <td class="specification-table__cell">Длина палки</td>
+                  <td class="specification-table__cell">Вес палки</td>
+                  <td class="specification-table__cell">Материал</td>
+                </tr>
+              </table>
+            </li>
+            <li class="promo-list__item wrapper-promo__slide--2 promo-item">
+              <img class="promo-item__img" src="img/slider-2.png" width="385" height="485" alt="Фитнес-браслет">
+              <span class="promo-item__index">02</span>
+              <span class="promo-item__lead">Худеем <br>правильно!</span>
+              <p class="promo-item__description">
+                Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+              </p>
+              <a class="promo-item__link-details button" href="#">Подробнее</a>
+              <table class="promo-item__specification specification-table">
+                <tr class="specification-table__row-values">
+                  <td class="specification-table__cell">48 часов</td>
+                </tr>
+                <tr class="specification-table__row-descriptions">
+                  <td class="specification-table__cell">Без подзарядки</td>
+                </tr>
+              </table>
+            </li>
+            <li class="promo-list__item wrapper-promo__slide--3 promo-item">
+              <img class="promo-item__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+              <span class="promo-item__index">03</span>
+              <span class="promo-item__lead">Порхает как бабочка, <br>жалит как пчела!</span>
+              <p class="promo-item__description">
+                Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+              </p>
+              <a class="promo-item__link-details button" href="#">Подробнее</a>
+              <table class="promo-item__specification specification-table">
+                <tr class="specification-table__row-values">
+                  <td class="specification-table__cell">800 метров</td>
+                  <td class="specification-table__cell">50 м</td>
+                </tr>
+                <tr class="specification-table__row-descriptions">
+                  <td class="specification-table__cell">Дальность полета</td>
+                  <td class="specification-table__cell">Радиус поражения</td>
+                </tr>
+              </table>
+            </li>
+          </ol>
+          <div class="wrapper-promo__controls">
+            <label class="wrapper-promo__label--1" for="slide1"></label>
+            <label class="wrapper-promo__label--2" for="slide2"></label>
+            <label class="wrapper-promo__label--3" for="slide3"></label>
+          </div>
+        </div>
       </section>
+
+
+
+
       <section class="popular">
         <h2 class="popular__title visually-hidden">Популярные группы товаров</h2>
         <ul class="popular__list popular-list">

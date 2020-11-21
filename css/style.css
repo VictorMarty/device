@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'gilroyextrabold';
+  src: url('..\\fonts\\gilroyextrabold.woff2') format('woff2'),
+       url('..\\fonts\\gilroyextrabold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroylight';
+  src: url('..\\fonts\\gilroylight.woff2') format('woff2'),
+       url('..\\fonts\\gilroylight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-weight: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0;
+  border:0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+.button {
+  height: 40px;
+  width: 220px;
+  display: table-cell;
+
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+
+  background-image: linear-gradient(transparent 0px, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+}
+/* :TODO: add animation hover */
+.button:hover {
+
+}
+.button:active {
+
+  color: rgba(0,0,0,0.3);
+}
+.main-header {
+  background-color: #f7e296;
+}
+
+.header-logo {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
+.user-navigation {
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+
+  list-style: none;
+}
+
+.user-navigation__link:hover {
+  opacity: 0.6;
+}
+
+.user-navigation__link:active {
+  opacity: 0.3;
+}
+
+.main-nav__list {
+  background-color: #f7e296;
+
+  list-style: none;
+}
+
+.main-nav__link {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-categories__list {
+  list-style: none
+}
+
+.catalog-categories__link,
+.promo-item__description {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 36px;
+  text-transform: none;
+}
+
+.catalog-categories__link:hover {
+  opacity: 0.6;
+}
+
+.catalog-categories__link:active {
+  opacity: 0.3;
+}
+
+.promo-list {
+  list-style: none;
+}
+
+.promo-item__index {
+  font-size: 179px;
+
+}
+
+.promo-item__lead {
+  font-size: 47px;
+  line-height: auto;
+}
+
+.promo-item__description {
+  line-height: 30px;
+  color: #464646;
+}
+
+.specification-table__row-values {
+  font-family: "gilroylight", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.specification-table__row-descriptions {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* TODO: Пофиксить слайдер под верстку */
+.wrapper-promo {
+  height: 850px;
+
+}
+
+.wrapper-promo__slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+/* Убираем радиокнопки */
+.wrapper-promo > input {
+	display: none;
+}
+
+/* Общий стиль слайда и каждый в отдельности */
+.promo-item {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+
+/* Оформление лэйблов */
+
+.wrapper-promo .wrapper-promo__controls {
+  left: 50%;
+  position: absolute;
+}
+
+.wrapper-promo label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 45px 50px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+}
+
+.wrapper-promo label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	border-radius: 50%;
+}
+
+/* Переключение собственных кнопок */
+
+.wrapper-promo label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+	transition: background ease-in-out 0.5s;
+}
+
+.wrapper-promo label:hover,
+.wrapper-promo__radio--1:checked ~ .wrapper-promo__controls label:nth-of-type(1),
+.wrapper-promo__radio--2:checked ~ .wrapper-promo__controls label:nth-of-type(2),
+.wrapper-promo__radio--3:checked ~ .wrapper-promo__controls label:nth-of-type(3) {
+  background:green;
+
+}
+/* Переключение слайдеров */
+.promo-item {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: scale(1.5);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+.wrapper-promo__radio--1:checked ~ .promo-list > .wrapper-promo__slide--1,
+.wrapper-promo__radio--2:checked ~ .promo-list > .wrapper-promo__slide--2,
+.wrapper-promo__radio--3:checked ~ .promo-list > .wrapper-promo__slide--3 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
