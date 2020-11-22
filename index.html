@@ -123,10 +123,6 @@
           </div>
         </div>
       </section>
-
-
-
-
       <section class="popular">
         <h2 class="popular__title visually-hidden">Популярные группы товаров</h2>
         <ul class="popular__list popular-list">
@@ -138,6 +134,7 @@
           <li class="popular-list__item"><a class="popular-list__link popular-list__link--quadrocopter" href="#">Квадрокоптеры</a></li>
         </ul>
       </section>
+      <!-- TODO: сделать слайдер по аналогии с популярныи промо-товарами -->
       <section class="services">
         <h2 class="services__title visually-hidden">Услуги</h2>
         <ul class="services__list services-list">
@@ -146,8 +143,8 @@
             <p class="services-list-item__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
           <li class="services-list__item services-list-item services-list-item--warranty">
-            <h3 class="services-name">Гарантия</h3>
-            <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            <h3 class="services-list-item__name">Гарантия</h3>
+            <p class="services-list-item__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
           <li class="services-list__item services-list-item services-list-item--credit">
             <h3 class="services-list-item__name">Кредит</h3>
@@ -158,10 +155,10 @@
       <section class="logotypes">
         <h2 class="logotypes__title visually-hidden">Логотипы брендов</h2>
         <ul class="logotypes__list">
-          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-1.png" alt="dji" width="260" height="100"></li>
-          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-2.png" alt="SP Gardets" width="260" height="100"></li>
-          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-3.png" alt="GoPro" width="260" height="100"></li>
-          <li class="logotypes__item"><img class="logotypes__img" src="img/logo-4.png" alt="vive" width="260" height="100"></li>
+          <li class="logotypes__item"><a class="logotypes__link" href="#" ><img class="logotypes__img" src="img/logo-1.png" alt="dji" width="260" height="100"></a></li>
+          <li class="logotypes__item"><a class="logotypes__link" href="#" ><img class="logotypes__img" src="img/logo-2.png" alt="SP Gardets" width="260" height="100"></a></li>
+          <li class="logotypes__item"><a class="logotypes__link" href="#" ><img class="logotypes__img" src="img/logo-3.png" alt="GoPro" width="260" height="100"></a></li>
+          <li class="logotypes__item"><a class="logotypes__link" href="#" ><img class="logotypes__img" src="img/logo-4.png" alt="vive" width="260" height="100"></a></li>
         </ul>
       </section>
       <section class="info">
@@ -196,13 +193,18 @@
         <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--basket" href="#">Корзина</a></li>
       </ul>
       <span class="footer-address">г. Москва, ул. Строителей, 15</span>
+      <ul class="footer-nav-list">
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Доставка</a></li>
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Гарантия</a></li>
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Контакты</a></li>
+      </ul>
       <a class="footer-telephone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
       <ul class="footer-social-list">
-        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--facebook visually-hidden">Facebook</a></li>
-        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--instagram">Instagram</a></li>
-        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--twitter">Twitter</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--facebook" aria-label="Facebook"></a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--instagram" aria-label="Instagram"></a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--twitter" aria-label="Twitter"></a></li>
       </ul>
-      <a class="footer-copyright" href="https://htmlacademy.ru">HTML Academy</a>
+      <a class="footer-copyright" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
     </footer>
     <section class="write-us" id="write-us">
       <h2 class="write-us__title visually-hidden">Форма обратной связи</h2>
