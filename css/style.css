@@ -14,7 +14,9 @@
   font-style: normal;
 }
 
-
+/*
+Общие стили
+*/
 body {
   margin: 0;
   padding: 0;
@@ -68,6 +70,10 @@ a {
 
   color: rgba(0,0,0,0.3);
 }
+
+/*
+Header
+*/
 .main-header {
   background-color: #f7e296;
 }
@@ -91,6 +97,11 @@ a {
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
+  color: #000000;
+}
+
+.site-search .user-navigation__link user-navigation__link--logout {
+  opacity: 0.3;
 }
 
 .user-navigation {
@@ -152,6 +163,8 @@ a {
 .catalog-categories__link:active {
   opacity: 0.3;
 }
+
+/* Main страницы index */
 
 .promo-list {
   list-style: none;
@@ -395,6 +408,56 @@ a {
 
   border: 2px solid #e5e5e5;
 }
+
+
+/*
+Main страницы catalog
+*/
+
+.navigation__title {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.breadcrumbs {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  opacity: 0.3;
+  list-style: none;
+}
+
+.breadcrumbs__link:not(.current)::after {
+  content: ">";
+  color: #000000;
+  opacity: 1;
+  padding-left: 15px;
+}
+
+.catalog-item {
+  list-style: none;
+}
+
+.catalog-item__title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.catalog-item__price {
+  font-family: "gilroylight", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.pagination__list {
+  list-style: none;
+}
+
+/*
+Footer
+*/
 
 .main-footer {
   background-color: #464646 ;
