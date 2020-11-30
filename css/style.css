@@ -1,30 +1,30 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url('..\\fonts\\gilroyextrabold.woff2') format('woff2'),
-       url('..\\fonts\\gilroyextrabold.woff') format('woff');
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('..\\fonts\\gilroylight.woff2') format('woff2'),
-       url('..\\fonts\\gilroylight.woff') format('woff');
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('..\\fonts\\opensans.woff2') format('woff2'),
-       url('..\\fonts\\opensans.woff') format('woff');
+  src: url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('..\\fonts\\opensanslight.woff2') format('woff2'),
-       url('..\\fonts\\opensanslight.woff') format('woff');
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -332,27 +332,27 @@ Header
 
  .popular-list__link--VR::before{
   content: "";
-  background-image: url("..\\img\\popular-1.svg");
+  background-image: url("../img/popular-1.svg");
 }
 .popular-list__link--selfie::before{
   content: "";
-  background-image: url("..\\img\\popular-2.svg");
+  background-image: url("../img/popular-2.svg");
 }
 .popular-list__link--action-camera::before{
   content: "";
-  background-image: url("..\\img\\popular-3.svg");
+  background-image: url("../img/popular-3.svg");
 }
 .popular-list__link--fitness::before{
   content: "";
-  background-image: url("..\\img\\popular-4.svg");
+  background-image: url("../img/popular-4.svg");
 }
 .popular-list__link--smart-watch::before{
   content: "";
-  background-image: url("..\\img\\popular-5.svg");
+  background-image: url("../img/popular-5.svg");
 }
 .popular-list__link--quadrocopter::before{
   content: "";
-  background-image: url("..\\img\\popular-6.svg");
+  background-image: url("../img/popular-6.svg");
 }
 
 .services {
@@ -506,7 +506,7 @@ Footer
   left: -20px;
   position: relative;
   top: 25px;
-  background-image: url("..\\img\\user.svg");
+  background-image: url("../img/user.svg");
   filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
 }
 
@@ -518,7 +518,7 @@ Footer
   left: -20px;
   position: relative;
   top: 25px;
-  background-image: url("..\\img\\cart.svg");
+  background-image: url("../img/cart.svg");
   filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
 }
 
@@ -530,7 +530,7 @@ Footer
   left: -20px;
   position: relative;
   top: 25px;
-  background-image: url("..\\img\\compare.svg");
+  background-image: url("../img/compare.svg");
   filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
 }
 
@@ -566,13 +566,13 @@ Footer
   opacity: 0.3;
 }
 .footer-social-list__link--facebook {
-  background-image: url("..\\img\\facebook-icon.svg");
+  background-image: url("../img/facebook-icon.svg");
 }
 .footer-social-list__link--instagram {
-  background-image: url("..\\img\\instagram-icon.svg");
+  background-image: url("../img/instagram-icon.svg");
 }
 .footer-social-list__link--twitter{
-  background-image: url("..\\img\\twitter-icon.svg");
+  background-image: url("../img/twitter-icon.svg");
 }
 
 .footer-copyright {
@@ -580,5 +580,5 @@ Footer
   width: 27px;
   height: 35px;
 
-  background-image: url("..\\img\\logo-html.svg");
+  background-image: url("../img/logo-html.svg");
 }
