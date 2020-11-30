@@ -2,7 +2,7 @@
   font-family: 'Gilroy';
   src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
        url('../fonts/gilroyextrabold.woff') format('woff');
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -38,7 +38,7 @@ body {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 18px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 800;
   color: #000000;
 
   background-color: #ffffff;
@@ -63,20 +63,31 @@ a {
 .button {
   height: 40px;
   width: 220px;
-  display: table-cell;
+  display: block;
 
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  vertical-align: middle;
   text-align: center;
   border: none;
+}
 
-  background-image: linear-gradient(transparent 0px, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+.button::before {
+  content: " ";
+  height: 8px;
+  width: 100%;
+  top: 55%;
+  position: relative;
+  z-index: -1;
+  display: block;
+  background-color: #f0c52e;
+
+
 }
 /* :TODO: add animation hover */
-.button:hover {
+.button:hover:before {
+  height:20px;
 
 }
 .button:active {
@@ -149,12 +160,14 @@ Header
 .main-nav__list,
 .footer-nav-list {
   background-color: #f7e296;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
   list-style: none;
 }
 
-
+.main-nav__item,
+.footer-nav-list__item {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
 
 .catalog-categories__list {
   list-style: none
@@ -185,12 +198,13 @@ Header
 
 .promo-item__index {
   font-size: 179px;
+  line-height: 1.2;
 
 }
 
 .promo-item__lead {
   font-size: 47px;
-  line-height: auto;
+  line-height: 1.2;
 }
 
 .promo-item__description {
@@ -199,8 +213,8 @@ Header
 }
 
 .specification-table__row-values {
-  font-family: "gilroylight", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 36px;
   line-height: 48px;
 }
@@ -223,7 +237,7 @@ Header
   height: inherit;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Убираем радиокнопки */
@@ -458,8 +472,8 @@ Main страницы catalog
 }
 
 .catalog-item__price {
-  font-family: "gilroylight", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
