@@ -165,7 +165,7 @@ Header
 
 .main-nav__item,
 .footer-nav-list__item {
-  letter-spacing: 0.2em;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
@@ -198,13 +198,13 @@ Header
 
 .promo-item__index {
   font-size: 179px;
-  line-height: 1.2;
+  line-height: 215px;
 
 }
 
 .promo-item__lead {
   font-size: 47px;
-  line-height: 1.2;
+  line-height: 56px;
 }
 
 .promo-item__description {
@@ -496,11 +496,6 @@ Footer
   color: #ffffff;
 }
 
-.footer-logo {
-  font-size: 48px;
-  color: #ffc600;
-}
-
 .footer-user-navigation {
 
   font-family: "Open Sans", Arial, sans-serif;
@@ -510,9 +505,11 @@ Footer
 
   list-style: none;
 }
-.user-navigation__link--login
+
+.user-navigation__link--login::before,
+.user-navigation__link--user::before,
 .footer-user-navigation__link--login::before,
-.footer-user-navigation__link--user::before{
+.footer-user-navigation__link--user::before  {
   content: " ";
   height: 12px;
   width: 13px;
@@ -520,10 +517,19 @@ Footer
   left: -20px;
   position: relative;
   top: 25px;
-  background-image: url("../img/user.svg");
-  filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
 }
 
+.user-navigation__link--login::before,
+.user-navigation__link--user::before {
+  background-image: url("../img/user.svg");
+}
+
+.footer-user-navigation__link--login::before,
+.footer-user-navigation__link--user::before {
+  background-image: url("../img/user-footer.svg");
+}
+
+.user-navigation__link--basket::before,
 .footer-user-navigation__link--basket::before {
   content: " ";
   height: 12px;
@@ -533,9 +539,14 @@ Footer
   position: relative;
   top: 25px;
   background-image: url("../img/cart.svg");
-  filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
 }
 
+.footer-user-navigation__link--basket::before {
+  content: " ";
+  background-image: url("../img/cart-footer.svg");
+}
+
+.user-navigation__link--compare::before,
 .footer-user-navigation__link--compare::before {
   content: " ";
   height: 10px;
@@ -545,7 +556,10 @@ Footer
   position: relative;
   top: 25px;
   background-image: url("../img/compare.svg");
-  filter: invert(74%) sepia(36%) saturate(2587%) hue-rotate(2deg) brightness(106%) contrast(105%);
+}
+.footer-user-navigation__link--compare::before {
+  content: " ";
+  background-image: url("../img/compare-footer.svg");
 }
 
 .footer-address,
