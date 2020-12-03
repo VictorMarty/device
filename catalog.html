@@ -8,7 +8,7 @@
   <body>
     <header class="main-header">
       <h1 class="main-header__title visually-hidden">Каталог магазина</h1>
-      <a class="header-logo" href="index.html">DEVICE</a>
+      <a class="header-logo" href="index.html"><img class="header-logo__img" src="img/logo.svg" width="169" height="54" alt="Логотип DEVICE"></a>
       <form class="site-search" action="https://echo.htmlacademy.ru" method="post">
         <label class="site-search__label" for="site-search__input">Поиск по сайту</label>
         <input class="site-search__input" id="site-search__input">
@@ -139,7 +139,7 @@
         </div>
     </main>
     <footer class="main-footer">
-      <span class="footer-logo">DEVICE</span>
+      <span class="footer-logo"><img class="footer-logo__img" src="img/logo-footer.svg"  width="167" height="54" alt="Логотип DEVICE"></span>
       <ul class="footer-user-navigation">
         <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--user" href="#">Валентин Петухов</a></li>
         <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--logout" href="#">Выйти</a></li>
@@ -147,26 +147,19 @@
         <li class="footer-user-navigation__item"><a class="footer-user-navigation__link footer-user-navigation__link--basket" href="#">Корзина</a></li>
       </ul>
       <span class="footer-address">г. Москва, ул. Строителей, 15</span>
-      <nav class="footer-nav">
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Доставка</a>
-          </li>
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Гарантия</a>
-          </li>
-          <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="footer-nav-list">
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Доставка</a></li>
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Гарантия</a></li>
+        <li class="footer-nav-list__item"><a href="#" class="footer-nav-list__link">Контакты</a></li>
+      </ul>
       <a class="footer-telephone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
       <ul class="footer-social-list">
-        <li class="footer-social-list__item"><a class="footer-social-list__facebook-link" href="#">Facebook</a></li>
-        <li class="footer-social-list__item"><a class="footer-social-list__instagram-link" href="#">Instagram</a></li>
-        <li class="footer-social-list__item"><a class="footer-social-list__twitter-link" href="#">Twitter</a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--facebook" aria-label="Facebook"></a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--instagram" aria-label="Instagram"></a></li>
+        <li class="footer-social-list__item"><a href="#" class="footer-social-list__link footer-social-list__link--twitter" aria-label="Twitter"></a></li>
       </ul>
-      <a class="footer-copyright" href="https://htmlacademy.ru">HTML Academy</a>
+      <a class="footer-copyright" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
     </footer>
   </body>
 </html>
+
