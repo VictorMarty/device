@@ -32,9 +32,6 @@
 Общие стили
 */
 body {
-  margin: 0;
-  padding: 0;
-
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 18px;
   line-height: 24px;
@@ -95,11 +92,26 @@ a {
   color: rgba(0,0,0,0.3);
 }
 
+.container {
+  width: 1200px;
+
+}
 /*
 Header
 */
 .main-header {
+  box-sizing: border-box;
+  margin-bottom: 70px;
   background-color: #f7e296;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header .wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -128,7 +140,9 @@ Header
   opacity: 0.3;
 }
 
-.user-navigation {
+.user-navigation{
+  display: flex;
+
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -136,6 +150,7 @@ Header
 
   list-style: none;
 }
+
 
 .user-navigation__link:hover {
   opacity: 0.6;
@@ -156,6 +171,20 @@ Header
   z-index: 2;
 }
 
+.main-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.main-nav__item {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+}
 
 .main-nav__list,
 .footer-nav-list {
@@ -192,6 +221,9 @@ Header
 
 /* Main страницы index */
 
+.promo {
+  margin-bottom: 110px;
+}
 .promo-list {
   list-style: none;
 }
@@ -233,24 +265,29 @@ Header
 }
 
 .wrapper-promo__slider {
-  background-color: #ddd;
   height: inherit;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.services {
+  display: flex;
+
+}
 /* Убираем радиокнопки */
-.wrapper-promo > input {
+.wrapper-promo > input ,
+.services > input {
   display: none;
 }
 
 /* Общий стиль слайда и каждый в отдельности */
 .promo-item {
+  display: flex;
   height: inherit;
   position: absolute;
   width: inherit;
 }
+
 
 /* Оформление лэйблов */
 
@@ -323,7 +360,19 @@ Header
 }
 
 .popular-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+}
+
+.popular {
+  margin-bottom: 85px;
+}
+
+.popular-list__item {
+  width: 160px;
 }
 
 .popular-list__link::before {
@@ -370,6 +419,7 @@ Header
 }
 
 .services {
+  margin-bottom: 105px;
   background-color: #e5e5e5;
 }
 
@@ -392,7 +442,12 @@ Header
   color: #464646;
 }
 
+.logotypes {
+  margin-bottom: 105px;
+}
 .logotypes__list {
+  display: flex;
+  justify-content: space-between ;
   list-style: none;
 }
 
@@ -487,6 +542,12 @@ Footer
 */
 
 .main-footer {
+  width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 85px;
+  padding-top: 65px;
+  padding-bottom: 65px;
   background-color: #464646 ;
   color: #ffffff;
 }
@@ -496,7 +557,11 @@ Footer
   color: #ffffff;
 }
 
+.main-footer .flex-wrapper {
+  justify-content: space-between;
+}
 .footer-user-navigation {
+  display: flex;
 
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
@@ -571,10 +636,15 @@ Footer
 }
 
 .footer-nav-list {
+  display: flex;
+
   background-color: #464646;
   color: #ffffff;
 }
 .footer-social-list {
+  display: flex;
+  justify-content: space-around;
+  width: 144px;
   list-style: none;
 }
 .footer-social-list__link--facebook,
