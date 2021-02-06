@@ -94,7 +94,9 @@ a {
 
 .container {
   width: 1200px;
-
+}
+.flex-wrapper {
+  display: flex;
 }
 /*
 Header
@@ -103,20 +105,20 @@ Header
   box-sizing: border-box;
   margin-bottom: 70px;
   background-color: #f7e296;
-  width: 1200px;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 60px;
 }
 
-.main-header .wrapper {
-  display: flex;
+.main-header > .flex-wrapper {
+  margin-top: -20px;
   justify-content: space-between;
 }
 
 .header-logo {
-  font-size: 48px;
-  line-height: 48px;
+  position: relative;
+  top: -25px;
 }
 
 .header-logo:hover {
@@ -142,12 +144,11 @@ Header
 
 .user-navigation{
   display: flex;
-
+  justify-content: flex-end;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
-
   list-style: none;
 }
 
@@ -160,6 +161,16 @@ Header
   opacity: 0.3;
 }
 
+.user-navigation__item {
+  width: 100px;
+}
+/* TODO: Разобраться, как отодвинуть  "войти" относительно другиъ элементов */
+.user-navigation__item:first-child {
+
+}
+
+
+
 .catalog-categories > .catalog-categories__list {
   display: none;
 }
@@ -171,14 +182,12 @@ Header
   z-index: 2;
 }
 
+
 .main-nav__list {
   display: flex;
   justify-content: space-between;
 }
 
-.flex-wrapper {
-  display: flex;
-}
 
 .main-nav__item {
   width: 160px;
@@ -197,6 +206,8 @@ Header
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
+
 
 .catalog-categories__list {
   list-style: none
@@ -220,7 +231,9 @@ Header
 }
 
 /* Main страницы index */
-
+main {
+  margin: 0 auto;
+}
 .promo {
   margin-bottom: 110px;
 }
@@ -259,9 +272,10 @@ Header
 }
 
 /* TODO: Пофиксить слайдер под верстку */
-.wrapper-promo {
-  height: 850px;
 
+.wrapper-promo {
+  width: 1160px;
+  height: 600px;
 }
 
 .wrapper-promo__slider {
@@ -270,10 +284,7 @@ Header
   position: relative;
 }
 
-.services {
-  display: flex;
 
-}
 /* Убираем радиокнопки */
 .wrapper-promo > input ,
 .services > input {
@@ -283,6 +294,7 @@ Header
 /* Общий стиль слайда и каждый в отдельности */
 .promo-item {
   display: flex;
+  width: 1
   height: inherit;
   position: absolute;
   width: inherit;
@@ -330,7 +342,7 @@ Header
   position: relative;
   border: 1px solid white;
   border-radius: 50%;
-  transition: background ease-in-out 0.5s;
+
 }
 
 .wrapper-promo label:hover,
@@ -358,6 +370,23 @@ Header
   z-index: 1;
   transform: scale(1);
 }
+
+/* Содержимое слайдеров */
+
+.promo-item__img {
+
+}
+.promo-item__index,
+.flex-wrapper-promo {
+  flex-grow:2;
+}
+
+.promo-item__index {
+  position: absolute
+}
+
+
+
 
 .popular-list {
   margin: 0;
@@ -420,10 +449,18 @@ Header
 
 .services {
   margin-bottom: 105px;
+  width: 1160px;
   background-color: #e5e5e5;
+  display: flex;
 }
 
-
+.service__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  width: 50%;
+}
 .services-list {
   list-style: none;
 }
@@ -541,14 +578,20 @@ Main страницы catalog
 Footer
 */
 
+
+
 .main-footer {
+  background-color: #464646 ;
+}
+.footer-container {
+  margin: 0 auto;
   width: 1200px;
   padding: 0 20px;
   box-sizing: border-box;
   margin-top: 85px;
   padding-top: 65px;
   padding-bottom: 65px;
-  background-color: #464646 ;
+
   color: #ffffff;
 }
 
@@ -646,6 +689,7 @@ Footer
   justify-content: space-around;
   width: 144px;
   list-style: none;
+  margin-left: 45%;
 }
 .footer-social-list__link--facebook,
 .footer-social-list__link--instagram,
