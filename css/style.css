@@ -110,17 +110,15 @@ Header
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: #f7e296;
-  width: 1160px;
+
   margin: 40px auto 0;
 
   padding: 0 60px;
 }
 
-.logo-container {
-  width: 1160px;
-  height: 54px;
+.header-logo {
   position: absolute;
-  top: 12px;
+  top: 21px;
 
 }
 
@@ -139,7 +137,7 @@ Header
   font-size: 15px;
   line-height: 30px;
   color: #000000;
-  padding-top: 45px;
+  margin-top: 45px;
 }
 
 
@@ -160,8 +158,7 @@ Header
 /* TODO: Подправить под два случая */
 .user-navigation__item,
 .footer-user-navigation__item {
-  width: 160px;
-  margin:0;
+  margin-left: 40px;
   padding:0;
 }
 
@@ -169,7 +166,8 @@ Header
   width: 280px;
 }
 
-.user-navigation__item:nth-child(2) a {
+user-navigation__item--first a {
+  align-self:center;
   padding-left: 7px;
 }
 
@@ -178,7 +176,7 @@ Header
   width: 100px;
 }
 
-.user-navigation__item:last-child  a {
+.user-navigation__item:last-child a {
   padding-left: 17px;
 }
 .user-navigation__link:hover {
@@ -295,20 +293,23 @@ Header
 }
 
 
-.catalog-categories > .catalog-categories__list {
-  display: none;
+.catalog-categories__list {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
 
-.catalog-categories:hover > .catalog-categories__list {
+.catalog-categories__title:hover + .catalog-categories__list {
   position: absolute;
-
+  opacity: 1;
   z-index: 2;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
+
 .catalog-categories:hover > .catalog-categories__list::before {
   content: ' ';
   position: absolute;
