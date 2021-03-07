@@ -267,6 +267,7 @@ Header
 
 .user-navigation__link--logout,
 .footer-user-navigation__link--logout {
+  opacity: 0.6;
   padding-left: 17px;
 }
 
@@ -314,7 +315,7 @@ Header
 
 .main-nav {
   width: 1040px;
-  margin-top: 37px;
+  margin-top: 29px;
 }
 
 .main-nav__list {
@@ -355,6 +356,24 @@ Header
   line-height: 24px;
   font-size: 18px;
   text-transform: uppercase;
+}
+.catalog-categories {
+  position: relative;
+}
+
+.catalog-categories::before,
+.catalog-categories::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  right: 20%;
+  bottom: 20%;
+  height: 15px;
+  width: 2px;
+  background-color: #333;
+}
+.catalog-categories::after {
+  transform: rotate(90deg);
 }
 
 .catalog-categories__list {
