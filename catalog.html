@@ -111,24 +111,26 @@
         </ul>
       </nav>
     </header>
-    <main class="catalog-content container">
-      <div class="navigation">
+    <main class="catalog-content">
+      <div class="navigation container">
         <h2 class="navigation__title">Моноподы для селфи</h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__path">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs__path">
-            <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+            <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="breadcrumbs__path current">Моноподы для селфи</li>
         </ul>
       </div>
-      <div class="flex-wrapper">
+      <div class="flex-wrapper flex-wrapper--wrap catalog">
+        <div class="filter-title"><h2>Фильтр:</h2></div>
         <div class="filter">
-          <h2 class="filter__title">Фильтр:</h2>
           <form class="filter__form filter-form">
-            <fieldset class="filter-form__fieldset">
+            <fieldset
+              class="filter-form__fieldset filter-form__fieldset--price"
+            >
               <legend class="filter-form__legend">Cтоимость</legend>
               <input
                 class="filter-form__range"
@@ -138,7 +140,9 @@
                 name="filter-form__range-price"
               />
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset
+              class="filter-form__fieldset filter-form__fieldset--color"
+            >
               <legend class="filter-form__legend">Цвет</legend>
               <input
                 class="filter-form__checkbox"
@@ -202,7 +206,9 @@
                 >Розовый</label
               >
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset
+              class="filter-form__fieldset filter-form__fieldset--bluetooth"
+            >
               <legend class="filter-form__legend">Bluetooth</legend>
               <input
                 class="filter-form__radiobutton"
@@ -235,117 +241,117 @@
             </button>
           </form>
         </div>
-        <div class="flex-wrapper small-container">
-          <div class="sort">
-            <h2 class="sort__title">Сортировка</h2>
-            <ul class="sort__list sort-list">
-              <li class="sort-list__item">
-                <button
-                  type="button"
-                  class="sort-list__button sort-list__button--current"
-                >
-                  По цене
-                </button>
-              </li>
-              <li class="sort-list__item">
-                <button type="button" class="sort-list__button">По типу</button>
-              </li>
-              <li class="sort-list__item">
-                <button type="button" class="sort-list__button">
-                  По популярности
-                </button>
-              </li>
-            </ul>
-          </div>
-          <ul class="catalog">
-            <li class="catalog-item">
+        <div class="sort">
+          <h2 class="sort__title">Сортировка:</h2>
+          <ul class="sort__list sort-list">
+            <li class="sort-list__item">
+              <button
+                type="button"
+                class="sort-list__button sort-list__button--current"
+              >
+                По цене
+              </button>
+            </li>
+            <li class="sort-list__item">
+              <button type="button" class="sort-list__button">По типу</button>
+            </li>
+            <li class="sort-list__item">
+              <button type="button" class="sort-list__button">
+                По популярности
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-wrapper">
+          <ul class="showcase small-container">
+            <li class="showcase-item">
               <img
-                class="catalog-item__image"
+                class="showcase-item__image"
                 src="img/item-1.jpg"
                 width="360"
                 height="380"
                 alt="Любительская селфи-палка"
               />
-              <h3 class="catalog-item__title">Любительская селфи-палка</h3>
-              <span class="catalog-item__price">500 руб.</span>
+              <h3 class="showcase-item__title">Любительская селфи-палка</h3>
+              <span class="showcase-item__price">500 руб.</span>
               <button
                 type="button"
-                class="catalog-item__basket-button button visually-hidden"
+                class="showcase-item__basket-button button visually-hidden"
               >
                 В корзину
               </button>
               <button
                 type="button"
-                class="catalog-item__compare-button button-compare visually-hidden"
+                class="showcase-item__compare-button button-compare visually-hidden"
               >
                 добавить к сравнению
               </button>
             </li>
-            <li class="catalog-item">
+            <li class="showcase-item">
               <img
-                class="catalog-item__image"
+                class="showcase-item__image"
                 src="img/item-2.jpg"
                 width="360"
                 height="380"
                 alt="Профессиональная селфи-палка"
               />
-              <h3 class="catalog-item__title">Профессиональная селфи-палка</h3>
-              <span class="catalog-item__price">1 500 руб.</span>
+              <h3 class="showcase-item__title">Профессиональная селфи-палка</h3>
+              <span class="showcase-item__price">1 500 руб.</span>
               <button
                 type="button"
-                class="catalog-item__basket-button button visually-hidden"
+                class="showcase-item__basket-button button visually-hidden"
               >
                 В корзину
               </button>
               <button
                 type="button"
-                class="catalog-item__compare-button button-compare visually-hidden"
+                class="showcase-item__compare-button button-compare visually-hidden"
               >
                 добавить к сравнению
               </button>
             </li>
-            <li class="catalog-item">
+            <li class="showcase-item">
               <img
-                class="catalog-item__image"
+                class="showcase-item__image"
                 src="img/item-3.jpg"
                 width="360"
                 height="380"
                 alt="Непотопляемая селфи-палка"
               />
-              <h3 class="catalog-item__title">Непотопляемая селфи-палка</h3>
-              <span class="catalog-item__price">2 500 руб.</span>
+              <h3 class="showcase-item__title">Непотопляемая селфи-палка</h3>
+              <span class="showcase-item__price">2 500 руб.</span>
               <button
                 type="button"
-                class="catalog-item__basket-button button visually-hidden"
+                class="showcase-item__basket-button button visually-hidden"
               >
                 В корзину
               </button>
               <button
                 type="button"
-                class="catalog-item__compare-button button-compare visually-hidden"
+                class="showcase-item__compare-button button-compare visually-hidden"
               >
                 добавить к сравнению
               </button>
             </li>
-            <li class="catalog-item">
+            <li class="showcase-item">
               <img
-                class="catalog-item__image"
+                class="showcase-item__image"
                 src="img/item-4.jpg"
                 width="360"
                 height="380"
                 alt="Селфи-палка «Следуй за мной»"
               />
-              <h3 class="catalog-item__title">Селфи-палка «Следуй за мной»</h3>
-              <span class="catalog-item__price">4 900 руб.</span>
+              <h3 class="showcase-item__title">Селфи-палка «Следуй за мной»</h3>
+              <span class="showcase-item__price">4 900 руб.</span>
               <button
                 type="button"
-                class="catalog-item__basket-button button visually-hidden"
+                class="showcase-item__basket-button button visually-hidden"
               >
                 В корзину
               </button>
               <button
                 type="button"
-                class="catalog-item__compare-button button-compare visually-hidden"
+                class="showcase-item__compare-button button-compare visually-hidden"
               >
                 добавить к сравнению
               </button>

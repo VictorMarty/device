@@ -96,6 +96,10 @@ a {
 .flex-wrapper {
   display: flex;
 }
+.flex-wrapper--wrap {
+  flex-wrap: wrap;
+}
+
 /*
 Header
 */
@@ -864,6 +868,9 @@ left: calc(15% - attr(width) / 2); */
 Main страницы catalog
 */
 
+.navigation {
+  margin-bottom: 48px;
+}
 .navigation::before {
   content: " ";
   position: absolute;
@@ -882,14 +889,14 @@ Main страницы catalog
   font-size: 47px;
   line-height: 48px;
   padding-left: 60px;
-  padding-top: 85px;
+  padding-top: 86px;
 }
 
 .breadcrumbs {
   display: flex;
   padding-top: 10px;
   padding-left: 60px;
-  margin-bottom: 45px;
+
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -899,19 +906,47 @@ Main страницы catalog
 }
 
 .breadcrumbs__path {
-  padding-right: 15px;
+  padding-right: 45px;
+  position: relative;
 }
 
-.breadcrumbs__link:not(.current)::after {
-  content: ">";
-  color: #000000;
-  opacity: 1;
-  padding-left: 15px;
+.breadcrumbs__link:not(.current)::before {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  right: 24px;
+  bottom: 8px;
+  position: absolute;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+
+  transform: rotate(45deg);
+}
+
+.catalog {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+}
+
+.filter-title {
+  width: 330px;
+  height: 70px;
+  order: -2;
+  background-color: #dcdcdc;
+  font-size: 16px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .filter {
-  background-color: grey;
-  width: 340px;
+  background-color: #eeeeee;
+  order: 0;
+  width: 330px;
 }
 
 .filter ~ .flex-wrapper {
@@ -921,6 +956,7 @@ Main страницы catalog
 .filter-form__fieldset {
   display: flex;
   flex-direction: column;
+  border: none;
 }
 
 .small-container {
@@ -929,7 +965,10 @@ Main страницы catalog
 }
 
 .sort {
+  width: 760px;
   display: flex;
+  background-color: #eeeeee;
+  order: -1;
 }
 
 .sort__list {
@@ -939,30 +978,33 @@ Main страницы catalog
   padding: 0;
 }
 
-.catalog {
+.showcase {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 68px;
 }
 
-.catalog-item {
+.showcase-item {
   list-style: none;
   width: 360px;
 }
 
-.catalog-item__title {
+.showcase-item__title {
   font-size: 18px;
   line-height: 24px;
+  width: 260px;
 }
 
-.catalog-item__price {
+.showcase-item__price {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  width: 100px;
 }
 
 .pagination {
