@@ -133,12 +133,19 @@
             >
               <legend class="filter-form__legend">Cтоимость</legend>
               <input
-                class="filter-form__range"
+                class="filter-form__range visually-hidden"
                 type="range"
                 min="0"
                 max="10000"
                 name="filter-form__range-price"
               />
+             <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
             </fieldset>
             <fieldset
               class="filter-form__fieldset filter-form__fieldset--color"

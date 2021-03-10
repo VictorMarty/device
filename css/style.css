@@ -28,6 +28,12 @@
   font-weight: 300;
   font-style: normal;
 }
+
+.test {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+}
 /*
 Общие стили
 */
@@ -957,6 +963,50 @@ Main страницы catalog
   display: flex;
   flex-direction: column;
   border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 60%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 60%;
 }
 
 .small-container {
