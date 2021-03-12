@@ -52,6 +52,11 @@ a {
   color: #000000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -534,8 +539,6 @@ Header
   width: 560px;
 }
 
-/* top: calc(50% - attr(height) / 2);
-left: calc(15% - attr(width) / 2); */
 
 .promo-item__wrapper > .promo-item__img {
   position: relative;
@@ -619,7 +622,7 @@ left: calc(15% - attr(width) / 2); */
 }
 .popular-list__link::before {
   display: inline-block;
-  content: "";
+  content: " ";
   width: 160px;
   height: 160px;
   margin-bottom: 26px;
@@ -939,14 +942,19 @@ Main страницы catalog
 }
 
 .filter-title {
+  display: flex;
   width: 330px;
   height: 70px;
   order: -2;
   background-color: #dcdcdc;
-  font-size: 16px;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
   text-transform: uppercase;
+}
+
+.filter-title h2 {
+  padding-left: 60px;
+  font-size: 16px;
+  margin: auto 0;
+  letter-spacing: 0.25em;
 }
 
 .filter {
@@ -967,8 +975,8 @@ Main страницы catalog
   width: 200px;
   padding: 0;
   margin: 0;
-  padding-top: 30px;
-  margin-top: 30px;
+  padding-top: 15px;
+  margin-left: 60px;
 }
 
 .filter-form__fieldset::before {
@@ -981,6 +989,17 @@ Main страницы catalog
   background: #000000;
 }
 
+.filter-form__fieldset--price {
+  margin-top: 80px;
+}
+
+.filter-form__fieldset--color {
+  margin-top: 57px;
+}
+
+.filter-form__fieldset--bluetooth {
+  margin-top: 47px;
+}
 .range-controls {
   position: relative;
   margin-top: 20px;
@@ -989,7 +1008,6 @@ Main страницы catalog
 
 .range-controls .scale {
   height: 2px;
-
   background: #dbdbdb;
 }
 
@@ -1002,10 +1020,8 @@ Main страницы catalog
 .range-toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -1041,9 +1057,33 @@ Main страницы catalog
   top: 200%;
   left: -200%;
 }
+
 .range-toggle-max {
   left: 60%;
 }
+
+.filter-form__label {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+
+input[type="checkbox"] + .filter-form__label::before {
+  content: url(../img/checkbox-off.svg);
+}
+
+input[type="checkbox"]:checked + .filter-form__label::before {
+  content: url(../img/checkbox-on.svg);
+}
+
+input[type="radio"] + .filter-form__label::before {
+  content: url(../img/radio-off.svg);
+}
+
+input[type="radio"]:checked + .filter-form__label::before {
+  content: url(../img/radio-on.svg);
+}
+
 .small-container {
   display: block;
   width: 760px;
