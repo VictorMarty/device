@@ -69,15 +69,19 @@ img {
 
 /* TODO: Разобраться, как сделать нормальный баттон) */
 .button {
-  height: 40px;
-  width: 220px;
-  display: block;
-
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  display: inline-block;
+  z-index:  1;
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 800;
   border: none;
 }
 
@@ -85,15 +89,18 @@ img {
   content: " ";
   height: 8px;
   width: 100%;
-  top: 55%;
-  position: relative;
+  top: calc(50% - 4px);
+  left:0;
+  position: absolute;
   z-index: -1;
-  display: block;
+
   background-color: #f0c52e;
 }
 /* :TODO: add animation hover */
 .button:hover:before {
-  height: 20px;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 .button:active {
   color: rgba(0, 0, 0, 0.3);
@@ -215,9 +222,7 @@ Header
 }
 
 /* FIXME: Пропадает баттон при нажании с псевдоэлементом */
-.site-search__input:focus ~ .site-search__button:active {
-  color: #ffffff;
-  background-color: #000000;
+.site-search__button:active {
   opacity: 0.6;
 }
 
@@ -465,7 +470,9 @@ Header
 .promo > input {
   display: none;
 }
-
+.promo .button {
+  width: 220px;
+}
 .promo-list {
   list-style: none;
   margin: 0;
@@ -671,7 +678,7 @@ Header
   display: flex;
 }
 
-.services > input {
+.services input {
   display: none;
 }
 
@@ -688,6 +695,16 @@ Header
   z-index: 0;
   background-color: #ffffff;
 }
+
+.services__list::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 7px;
+
+  background: #000000;
+}
+
 
 .services-list-item {
   opacity: 0;
@@ -706,8 +723,11 @@ Header
 }
 
 .service__controls li {
+  display: block;
   z-index: 4;
   height: 40px;
+  margin: 0;
+  padding: 0;
   padding-left: 17px;
   margin-bottom: 24px;
   font-size: 18px;
@@ -715,10 +735,41 @@ Header
   text-transform: uppercase;
 }
 
+
 .service__controls label {
   display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
   width: 160px;
   text-align: center;
+}
+
+.service__controls label:before {
+  content: " ";
+  height: 8px;
+  width: 100%;
+  top: calc(50% - 4px);
+  left:0;
+  position: absolute;
+  z-index: -1;
+
+  background-color: #f0c52e;
+
+}
+
+#services-slide1:checked 
+  ~ .container > 
+.service__controls li:nth-child(1),
+#services-slide2:checked 
+  ~ .container > 
+.service__controls li:nth-child(2),
+#services-slide3:checked 
+  ~ .container > 
+.service__controls li:nth-child(3)
+ {
+  background: #000000;
+  color: #f0c52e;
 }
 
 #services-slide1:checked
@@ -1064,12 +1115,14 @@ Main страницы catalog
 
 .filter-form__label {
   margin-top: 10px;
-  padding-left: 10px;
 }
 
-
+.filter-form__label span {
+  padding-left: 40px;
+}
 input[type="checkbox"] + .filter-form__label::before {
   content: url(../img/checkbox-off.svg);
+  position:absolute;
 }
 
 input[type="checkbox"]:checked + .filter-form__label::before {
@@ -1078,6 +1131,7 @@ input[type="checkbox"]:checked + .filter-form__label::before {
 
 input[type="radio"] + .filter-form__label::before {
   content: url(../img/radio-off.svg);
+  position:absolute;
 }
 
 input[type="radio"]:checked + .filter-form__label::before {
@@ -1103,6 +1157,20 @@ input[type="radio"]:checked + .filter-form__label::before {
   padding: 0;
 }
 
+.sort-list__button,
+.sort-list__button:focus {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  border: none;
+  color: inherit;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+
+.sort-list__button--current {
+  opacity: 1;
+}
 .showcase {
   display: flex;
   flex-wrap: wrap;
