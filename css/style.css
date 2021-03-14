@@ -75,7 +75,7 @@ img {
   margin: 0;
   min-width: 200px;
   display: inline-block;
-  z-index:  1;
+  z-index: 1;
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.2em;
@@ -90,7 +90,7 @@ img {
   height: 8px;
   width: 100%;
   top: calc(50% - 4px);
-  left:0;
+  left: 0;
   position: absolute;
   z-index: -1;
 
@@ -546,7 +546,6 @@ Header
   width: 560px;
 }
 
-
 .promo-item__wrapper > .promo-item__img {
   position: relative;
   align-self: center;
@@ -705,7 +704,6 @@ Header
   background: #000000;
 }
 
-
 .services-list-item {
   opacity: 0;
   position: absolute;
@@ -735,7 +733,6 @@ Header
   text-transform: uppercase;
 }
 
-
 .service__controls label {
   display: inline-block;
   position: relative;
@@ -750,24 +747,16 @@ Header
   height: 8px;
   width: 100%;
   top: calc(50% - 4px);
-  left:0;
+  left: 0;
   position: absolute;
   z-index: -1;
 
   background-color: #f0c52e;
-
 }
 
-#services-slide1:checked 
-  ~ .container > 
-.service__controls li:nth-child(1),
-#services-slide2:checked 
-  ~ .container > 
-.service__controls li:nth-child(2),
-#services-slide3:checked 
-  ~ .container > 
-.service__controls li:nth-child(3)
- {
+#services-slide1:checked ~ .container > .service__controls li:nth-child(1),
+#services-slide2:checked ~ .container > .service__controls li:nth-child(2),
+#services-slide3:checked ~ .container > .service__controls li:nth-child(3) {
   background: #000000;
   color: #f0c52e;
 }
@@ -1122,7 +1111,7 @@ Main страницы catalog
 }
 input[type="checkbox"] + .filter-form__label::before {
   content: url(../img/checkbox-off.svg);
-  position:absolute;
+  position: absolute;
 }
 
 input[type="checkbox"]:checked + .filter-form__label::before {
@@ -1131,7 +1120,7 @@ input[type="checkbox"]:checked + .filter-form__label::before {
 
 input[type="radio"] + .filter-form__label::before {
   content: url(../img/radio-off.svg);
-  position:absolute;
+  position: absolute;
 }
 
 input[type="radio"]:checked + .filter-form__label::before {
@@ -1147,12 +1136,23 @@ input[type="radio"]:checked + .filter-form__label::before {
   width: 760px;
   display: flex;
   background-color: #eeeeee;
+  justify-content: flex-start;
+  align-items: center;
   order: -1;
+}
+
+.sort__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 0;
 }
 
 .sort__list {
   display: flex;
   list-style: none;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -1167,10 +1167,35 @@ input[type="radio"]:checked + .filter-form__label::before {
   background-color: transparent;
 }
 
-
 .sort-list__button--current {
   opacity: 1;
 }
+
+.sort__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 42px;
+}
+
+.sort__order-button-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #c3c2c2;
+}
+
+.sort__order-button-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #000000;
+}
+
 .showcase {
   display: flex;
   flex-wrap: wrap;
