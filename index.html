@@ -364,15 +364,15 @@
         <section class="flex-wrapper__element info">
           <h2 class="info__title">О нас</h2>
           <p class="info__paragraph">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+            Огромный выбор гаджетов не оставит равнодушным гика, <br>который есть в
             каждом из нас.
           </p>
           <p class="info__paragraph">
-            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE
+            Мы можем доставить ваш товар в самые отдаленные точки <br>России! DEVICE
             работает со многими транспортными компаниями:
           </p>
           <ul class="info__logistic-list logistic-list">
-            <li class="logistic-list__item">Деловые линии</li>
+            <li class="logistic-list__item">Деловые Линии</li>
             <li class="logistic-list__item">Автотрейдинг</li>
             <li class="logistic-list__item">ЖелДорЭкспедиция</li>
           </ul>
@@ -492,34 +492,39 @@
     <section class="write-us" id="write-us">
       <h2 class="write-us__title visually-hidden">Форма обратной связи</h2>
       <form
-        class="write-us__form write-us-form"
+        class="write-us__form write-us-form small-container"
         action="https://echo.htmlacademy.ru"
         method="post"
-      >
+      > <div class="popup-form-element popup-form-element--name">
         <label class="write-us-form_label" for="write-us-form__name-input"
           >Ваше имя:</label
         >
         <input
-          class="write-us-form__name-input"
+          class="write-us-form__input"
           id="write-us-form__name-input"
           placeholder="Имя Фамилия"
         />
+      </div>
+             <div class="popup-form-element popup-form-element--email">
         <label class="write-us-form_label" for="write-us-form__email-input"
           >Ваш e-mail:</label
         >
         <input
-          class="write-us-form__email-input"
+          class="write-us-form__input"
           id="write-us-form__email-input"
           placeholder="email@example.com"
         />
+      </div>
+        <div class="popup-form-element popup-form-element--text">
         <label class="write-us-form_label" for="write-us-form__textarea-input"
           >Текст письма:</label
         >
         <textarea
-          class="write-us-form__textarea-input"
+          class="write-us-form__input"
           id="write-us-form__textarea-input"
-          placeholder="В свободной форме"
+          placeholder="В свободной форме" disabled
         ></textarea>
+      </div>
         <button class="write-us-form_submit-button button" type="submit">
           Отправить
         </button>
