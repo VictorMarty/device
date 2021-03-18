@@ -110,8 +110,6 @@ img {
 
 }
 
-
-
 .button:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -186,6 +184,7 @@ Header
 .site-search__input {
   display: inline-block;
   vertical-align: top;
+  position: relative;
   margin: 0;
   padding: 0;
   width: 320px;
@@ -194,6 +193,7 @@ Header
   background: none;
   outline: 0;
 }
+
 
 .site-search__input::placeholder {
   color: #000000;
@@ -237,8 +237,10 @@ Header
 }
 
 /* FIXME: Пропадает баттон при нажании с псевдоэлементом */
-.site-search__button:active {
+.site-search__input:focus ~ .site-search__button:active {
   opacity: 0.6;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .user-navigation,
@@ -972,7 +974,9 @@ Header
 
 /*Popups*/
 
-.write-us {
+.write-us,
+.map-popup
+ {
   position: fixed;
   top: 30%;
   left: 15%;
@@ -984,8 +988,7 @@ Header
   /*FIXME: научиться правильно получать тень*/
   box-shadow: 3px 3px 6px 2px;
 /*Чтобы скрыть попап*/
-display: none;
-
+  display: none;
 }
 
 
@@ -993,6 +996,7 @@ display: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
   margin-top: 30px;
 }
 
@@ -1044,11 +1048,13 @@ display: none;
 }
 
 
-.write-us-form_submit-button {
+.write-us-form__submit-button {
   margin-top: 40px;
 }
 
-.write-us__button {
+.write-us__button,
+.map-popup__button
+ {
   position: absolute;
   display: block;
   top: 22px;
@@ -1058,10 +1064,12 @@ display: none;
   background-color: #f7e296;
   width: 55px;
   height: 55px;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
-.write-us__button::before {
+.write-us__button::before,
+.map-popup__button::before
+ {
   content: "+";
   position: absolute;
   font-size: 64px;
@@ -1071,19 +1079,24 @@ display: none;
   transform: rotate(45deg);
 }
 
-.write-us__button:hover {
+.write-us__button:hover,
+.map-popup__button:hover
+ {
   background: #f0c52e;
 }
-.write-us__button:active {
+
+.write-us__button:active,
+.map-popup__button:active
+  {
   outline: none;
   background: #faedc0;
 }
 
-.write-us__button:focus {
+.write-us__button:focus,
+.map-popup__button:focus
+ {
   outline: none;
 }
-
-
 
 /*
 Main страницы catalog
@@ -1396,7 +1409,7 @@ input[type="radio"]:checked + .filter-form__label::before {
 
 .pagination {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 760px;
   background-color: #ebebeb;
 }
@@ -1404,6 +1417,68 @@ input[type="radio"]:checked + .filter-form__label::before {
 .pagination__list {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.pagination__item {
+  margin: 0 15px;
+}
+
+.pagination__page-number {
+  border: none;
+  background: none;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  font-family: "Gilroy", Arial, sans-serif;
+    margin: 0;
+  padding: 0;
+  opacity: 0.3;
+}
+.pagination__page-number:hover {
+  opacity: 0.6;
+}
+.pagination__page-number:active {
+  opacity: 1;
+}
+
+.pagination__page-number--active {
+  opacity:1;
+}
+
+.pagination__page-number--active:hover {
+  opacity:1;
+}
+.pagination__page-number--active:active {
+  opacity:1;
+}
+.pagination__button {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  border: none;
+  background: none;
+  text-align: center;
+  height: 70px;
+
+}
+
+.pagination__button--prev {
+  width: 130px;
+}
+.pagination__button--next {
+  width: 140px;
+}
+
+.pagination__button:hover {
+  background-color: #d9d9d9;
+}
+.pagination__button:active {
+  opacity: 0.3;
 }
 
 /*
@@ -1524,4 +1599,5 @@ Footer
   height: 35px;
 
   background-image: url("../img/logo-html.svg");
+  background-repeat: no-repeat;
 }
