@@ -67,7 +67,6 @@ img {
   overflow: hidden;
 }
 
-/* TODO: Разобраться, как сделать нормальный баттон) */
 .button {
   position: relative;
   background-color: transparent;
@@ -93,10 +92,9 @@ img {
   left: 0;
   position: absolute;
   z-index: -1;
-
   background-color: #f0c52e;
 }
-/* :TODO: add animation hover */
+
 .button:hover::before {
   height: 100%;
   top: 0;
@@ -108,12 +106,9 @@ img {
   top: 0;
   left: 0;
 }
-.button:focus {
-  outline: none;
-}
+
 .button:active {
   color: rgba(0, 0, 0, 0.3);
-  outline: none;
 }
 
 .container {
@@ -188,6 +183,7 @@ Header, Footer
   margin: 0;
   padding: 0;
   width: 320px;
+  height: 50px;
   padding-left: 20px;
   border: none;
   background: none;
@@ -205,6 +201,7 @@ Header, Footer
   opacity: 0.6;
 }
 .site-search__button {
+  display: none;
   border: 2px solid transparent;
   color: transparent;
   box-sizing: border-box;
@@ -227,6 +224,11 @@ Header, Footer
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.site-search__input:focus ~ .site-search__button,
+.site-search__button:active {
+  display: block;
 }
 
 .site-search__input:focus ~ .site-search__label::before,
@@ -264,7 +266,12 @@ Header, Footer
   margin: 0;
   padding: 0;
 
-  padding-top: 43px;
+}
+.user-navigation {
+    padding-top: 43px;
+}
+.footer-user-navigation {
+  padding-top: 8px;
 }
 /* TODO: Подправить под два случая */
 .user-navigation__item,
@@ -273,11 +280,12 @@ Header, Footer
   padding: 0;
 }
 
-.user-navigation__item--login,
-.footer-user-navigation__item--login {
+.user-navigation__item--login {
   width: 286px;
 }
-
+.footer-user-navigation__item--login {
+  width: ;
+}
 .user-navigation__item--compare,
 .footer-user-navigation__item--compare {
   width: 113px;
@@ -420,6 +428,7 @@ Header, Footer
   height: 15px;
   width: 2px;
   background-color: #333;
+  opacity: 0,5;
 }
 
 .catalog-categories::after {
@@ -495,7 +504,6 @@ Footer
   width: 1200px;
   padding: 0 20px;
   box-sizing: border-box;
-  margin-top: 85px;
   padding-top: 55px;
   padding-bottom: 55px;
 
@@ -509,9 +517,17 @@ Footer
   margin-bottom: 20px;
 }
 
+.main-footer .flex-wrapper:nth-child(2) {
+  margin-top: 45px;
+}
+
+.main-footer .flex-wrapper:nth-child(3) {
+  margin-top: 40px;
+}
 .main-footer .flex-wrapper:nth-child(3)::before {
   content: " ";
   display: block;
+  margin-top: 40px;
   width: 80px;
   height: 8px;
   background-color: #f0c52e;
@@ -878,10 +894,12 @@ Footer
   position: relative;
   width: 160px;
   text-align: center;
-  margin: auto 0;
+  vertical-align: center;
+  font-size: 18px;
+  line-height: 38px;
 }
 
-.service__controls label:before {
+.service__controls label::before {
   content: " ";
   height: 8px;
   width: 100%;
@@ -892,6 +910,16 @@ Footer
   background-color: #f0c52e;
 }
 
+.service__controls label:hover::before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background-color: #f0c52e;
+}
 #services-slide1:checked ~ .container > .service__controls li:nth-child(1),
 #services-slide2:checked ~ .container > .service__controls li:nth-child(2),
 #services-slide3:checked ~ .container > .service__controls li:nth-child(3) {
@@ -1469,6 +1497,11 @@ input[type="radio"]:checked + .filter-form__label::before {
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-left: 50px;
+}
+
+.sort-list__item{
+  margin-right: 15px;
 }
 
 .sort-list__button,
@@ -1496,6 +1529,7 @@ input[type="radio"]:checked + .filter-form__label::before {
 .sort__order {
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
   align-items: center;
   width: 42px;
 }
@@ -1532,7 +1566,7 @@ input[type="radio"]:checked + .filter-form__label::before {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
+  align-items: space-between;
   list-style: none;
   width: 360px;
   margin-bottom: 45px;
@@ -1541,6 +1575,7 @@ input[type="radio"]:checked + .filter-form__label::before {
 .showcase-item__container {
   position: relative;
   height: 380px;
+  margin-bottom: 20px;
 }
 
 .showcase-item__container:hover > .showcase-item__image {
@@ -1579,12 +1614,8 @@ input[type="radio"]:checked + .filter-form__label::before {
 
 .showcase-item__container:hover > .showcase-item__compare-button:active {
   opacity: 0.2;
-  outline: none;
 }
 
-.showcase-item__container:hover > .showcase-item__compare-button:focus {
-  outline: none;
-}
 .showcase-item__title {
   margin: 0;
   font-size: 18px;
