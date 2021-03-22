@@ -82,6 +82,7 @@ img {
   text-align: center;
   font-weight: 800;
   border: none;
+  cursor: pointer;
 }
 
 .button::before {
@@ -1143,9 +1144,11 @@ Footer
   height: 555px;
   background-color: #ffffff;
   z-index: 1000;
-  /*FIXME: научиться правильно получать тень*/
-  box-shadow: 3px 3px 6px 2px;
-  /*Чтобы скрыть попап*/
+  box-shadow: 0px 0px 24px -8px;
+  display: none;
+}
+.map-popup {
+  background: none;
   display: none;
 }
 
@@ -1211,6 +1214,7 @@ Footer
 .write-us__button,
 .map-popup__button {
   position: absolute;
+  cursor: pointer;
   display: block;
   top: 22px;
   right: 22px;
@@ -1314,6 +1318,18 @@ Main страницы catalog
   transform: rotate(45deg);
 }
 
+.sort-filter-wrapper {
+  position: relative;
+}
+.sort-filter-wrapper::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  min-height: 70px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.08);
+}
+
 .catalog {
   display: flex;
   margin: 0 auto;
@@ -1323,12 +1339,22 @@ Main страницы catalog
   width: 1160px;
 }
 
+.catalog::after {
+  content: " ";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: calc(50% + 252px);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 .filter-title {
   display: flex;
   width: 330px;
   height: 70px;
   order: -2;
-  background-color: #dcdcdc;
   text-transform: uppercase;
 }
 
@@ -1340,7 +1366,6 @@ Main страницы catalog
 }
 
 .filter {
-  background-color: #eeeeee;
   order: 0;
   width: 330px;
 }
