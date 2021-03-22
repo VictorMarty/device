@@ -1439,6 +1439,7 @@ Main страницы catalog
   position: relative;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
   border: none;
   width: 200px;
   padding: 0;
@@ -1532,31 +1533,42 @@ Main страницы catalog
 
 .filter-form__label {
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .filter-form__label span {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: baseline;
   padding-left: 40px;
 }
 input[type="checkbox"] + .filter-form__label::before {
   content: url(../img/checkbox-off.svg);
   position: absolute;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + .filter-form__label::before {
   content: url(../img/checkbox-on.svg);
+  cursor: pointer;
 }
 
 input[type="radio"] + .filter-form__label::before {
   content: url(../img/radio-off.svg);
   position: absolute;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + .filter-form__label::before {
   content: url(../img/radio-on.svg);
+  cursor: pointer;
 }
 
 .filter-form__submit-button {
-  margin-top: 50px;
+  margin-top: 35px;
   margin-left: 60px;
 }
 
@@ -1598,6 +1610,7 @@ input[type="radio"]:checked + .filter-form__label::before {
   color: inherit;
   opacity: 0.3;
   background-color: transparent;
+  cursor: pointer;
 }
 .sort-list__button:hover {
   opacity: 0.6;
@@ -1619,22 +1632,41 @@ input[type="radio"]:checked + .filter-form__label::before {
   width: 42px;
 }
 
-.sort__order-button-up {
+
+.sort__order-button-up,
+.sort__order-button-down {
+    cursor: pointer;
   display: inline-block;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 10px solid #c3c2c2;
+  opacity: 0.2;
+}
+.sort__order-button-up:hover,
+.sort__order-button-down:hover {
+  opacity: 0.4;
 }
 
+.sort__order-button-up:active,
+.sort__order-button-down:active {
+  opacity: 1;
+}
+
+.sort__order-button-up {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #000000;
+
+}
 .sort__order-button-down {
-  display: inline-block;
-  width: 0;
-  height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 10px solid #000000;
+}
+
+.sort__order .order--current,
+.sort__order .order--current:hover,
+.sort__order .order--current:active {
+  opacity: 1;
 }
 
 .showcase {
@@ -1665,10 +1697,29 @@ input[type="radio"]:checked + .filter-form__label::before {
 
 .showcase-item__container:hover > .showcase-item__image {
   opacity: 0.6;
+  cursor: pointer;
 }
+.showcase-item--new {
+  position: relative;
+}
+.showcase-item--new::after {
+  content: "NEW";
+  font-size: 16px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 15px 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+
+
 .showcase-item__basket-button {
   display: none;
 }
+
 .showcase-item__container:hover > .showcase-item__basket-button {
   display: inline-block;
   width: 200px;
@@ -1678,6 +1729,7 @@ input[type="radio"]:checked + .filter-form__label::before {
 }
 
 .showcase-item__compare-button {
+    cursor: pointer;
   display: none;
 }
 .showcase-item__container:hover > .showcase-item__compare-button {
@@ -1739,6 +1791,7 @@ input[type="radio"]:checked + .filter-form__label::before {
 }
 
 .pagination__page-number {
+    cursor: pointer;
   border: none;
   background: none;
   font-size: 16px;
@@ -1778,6 +1831,7 @@ input[type="radio"]:checked + .filter-form__label::before {
   background: none;
   text-align: center;
   height: 70px;
+    cursor: pointer;
 }
 
 .pagination__button--prev {
