@@ -101,7 +101,9 @@ img {
   top: 0;
   left: 0;
 }
-
+.button:focus {
+  outline: 1px solid #000000;
+}
 .button:focus::before {
   height: 100%;
   top: 0;
@@ -168,7 +170,7 @@ Header, Footer
 
 .site-search {
   position: relative;
-  width: 440px;
+  width: 520px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,60 +204,22 @@ Header, Footer
   outline: none;
 }
 
-.site-search__input::-webkit-input-placeholder {
-  color: #000000;
-  opacity: 0.3;
-  line-height: 2;
-  text-align: left;
-}
-
-.site-search__input::-moz-placeholder {
-  color: #000000;
-  opacity: 0.3;
-  line-height: 2;
-  text-align: left;
-}
-
-.site-search__input:-ms-input-placeholder {
-  color: #000000;
-  opacity: 0.3;
-  line-height: 2;
-  text-align: left;
-}
-
-.site-search__input::-ms-input-placeholder {
-  color: #000000;
-  opacity: 0.3;
-  line-height: 2;
-  text-align: left;
-}
-
-.site-search__input::placeholder {
-  color: #000000;
-  opacity: 0.3;
-  line-height: 2;
-  text-align: left;
-}
-
+.site-search__input::-webkit-input-placeholder,
+.site-search__input::-moz-placeholder,
+.site-search__input:-ms-input-placeholder,
+.site-search__input::-ms-input-placeholder,
+.site-search__input::placeholder,
 .site-search__input:hover::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.site-search__input:hover::-moz-placeholder {
-  opacity: 0.6;
-}
-
-.site-search__input:hover:-ms-input-placeholder {
-  opacity: 0.6;
-}
-
-.site-search__input:hover::-ms-input-placeholder {
-  opacity: 0.6;
-}
-
+.site-search__input:hover::-moz-placeholder,
+.site-search__input:hover:-ms-input-placeholder,
+.site-search__input:hover::-ms-input-placeholder,
 .site-search__input:hover::placeholder {
   opacity: 0.6;
 }
+
 .site-search__button {
   display: none;
   border: 2px solid transparent;
@@ -534,6 +498,7 @@ Header, Footer
   position: absolute;
   opacity: 0;
   z-index: -1;
+  min-width: 720px;
 }
 .catalog-categories__title {
   display: inline-block;
@@ -565,6 +530,8 @@ Header, Footer
 }
 
 .catalog-categories__flex-container {
+  display: inline-block;
+  vertical-align: baseline;
   padding-top: 15px;
   padding-left: 0;
   margin-right: 40px;
@@ -1654,7 +1621,7 @@ Main страницы catalog
 .filter-title h2 {
   padding-left: 60px;
   font-size: 16px;
-  margin: auto 0;
+  margin: 22px 0;
   letter-spacing: 0.25em;
 }
 
