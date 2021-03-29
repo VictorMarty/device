@@ -1800,7 +1800,6 @@ input[type="radio"]:checked + .filter-form__label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #eeeeee;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
