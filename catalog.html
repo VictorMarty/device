@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href="css/normalize.css" rel="stylesheet" />
     <title>Каталог техники магазина Девайс</title>
   </head>
@@ -17,7 +17,7 @@
           height="36"
           alt="Логотип DEVICE"
       /></a>
-       <form
+      <form
         class="site-search"
         action="https://echo.htmlacademy.ru"
         method="post"
@@ -142,8 +142,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+                  <div class="range-toggle range-toggle-min" tabindex="0"></div>
+                  <div class="range-toggle range-toggle-max" tabindex="0"></div>
                 </div>
               </fieldset>
               <fieldset
@@ -156,11 +156,13 @@
                   id="filter-form__checkbox--black"
                   value="black"
                   name="filter-form__checkbox"
+                  tabindex="-1"
                   checked
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__checkbox--black"
+                  tabindex="0"
                   ><span>Черный</span></label
                 >
                 <input
@@ -169,10 +171,12 @@
                   id="filter-form__checkbox--white"
                   value="white"
                   name="filter-form__checkbox"
+                  tabindex="-1"
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__checkbox--white"
+                  tabindex="0"
                   ><span>Белый</span></label
                 >
                 <input
@@ -181,11 +185,13 @@
                   id="filter-form__checkbox--blue"
                   value="blue"
                   name="filter-form__checkbox"
+                  tabindex="-1"
                   checked
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__checkbox--blue"
+                  tabindex="0"
                   ><span>Синий</span></label
                 >
                 <input
@@ -194,9 +200,13 @@
                   id="filter-form__checkbox--red"
                   value="red"
                   name="filter-form__checkbox"
+                  tabindex="-1"
                   checked
                 />
-                <label class="filter-form__label" for="filter-form__checkbox--red"
+                <label
+                  class="filter-form__label"
+                  for="filter-form__checkbox--red"
+                  tabindex="0"
                   ><span>Красный</span></label
                 >
                 <input
@@ -205,10 +215,12 @@
                   id="filter-form__checkbox--pink"
                   value="pink"
                   name="filter-form__checkbox"
+                  tabindex="-1"
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__checkbox--pink"
+                  tabindex="0"
                   ><span>Розовый</span></label
                 >
               </fieldset>
@@ -223,10 +235,12 @@
                   value="yes"
                   name="filter-form__radiobutton-bluetooth"
                   checked
+                  tabindex="-1"
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__radiobutton--yes"
+                  tabindex="0"
                   ><span>Есть</span></label
                 >
                 <input
@@ -235,10 +249,12 @@
                   id="filter-form__radiobutton--no"
                   value="no"
                   name="filter-form__radiobutton-bluetooth"
+                  tabindex="-1"
                 />
                 <label
                   class="filter-form__label"
                   for="filter-form__radiobutton--no"
+                  tabindex="0"
                   ><span>Нет</span></label
                 >
               </fieldset>
@@ -268,121 +284,131 @@
               </li>
             </ul>
             <div class="sort__order">
-              <div class="sort__order-button-up order--current"></div>
-              <div class="sort__order-button-down"></div>
+              <div
+                class="sort__order-button-up order--current"
+                tabindex="0"
+              ></div>
+              <div class="sort__order-button-down" tabindex="0"></div>
             </div>
           </div>
           <div class="flex-wrapper">
             <ul class="showcase small-container">
-              <li class="showcase-item">
+              <li class="showcase-item" tabindex="0">
                 <div class="showcase-item__container">
-                <img
-                  class="showcase-item__image"
-                  src="img/item-1.jpg"
-                  width="360"
-                  height="380"
-                  alt="Любительская селфи-палка"
-                />
-                <button
-                  type="button"
-                  class="showcase-item__basket-button button"
-                >
-                  В корзину
-                </button>
-                <button
-                  type="button"
-                  class="showcase-item__compare-button button-compare"
-                >
-                  Добавить к сравнению
-                </button>
+                  <img
+                    class="showcase-item__image"
+                    src="img/item-1.jpg"
+                    width="360"
+                    height="380"
+                    alt="Любительская селфи-палка"
+                  />
+                  <button
+                    type="button"
+                    class="showcase-item__basket-button button"
+                  >
+                    В корзину
+                  </button>
+                  <button
+                    type="button"
+                    class="showcase-item__compare-button button-compare"
+                  >
+                    Добавить к сравнению
+                  </button>
                 </div>
                 <h3 class="showcase-item__title">Любительская селфи-палка</h3>
                 <span class="showcase-item__price">500 руб.</span>
-
               </li>
-              <li class="showcase-item">
+              <li class="showcase-item" tabindex="0">
                 <div class="showcase-item__container">
-                <img
-                  class="showcase-item__image"
-                  src="img/item-2.jpg"
-                  width="360"
-                  height="380"
-                  alt="Профессиональная селфи-палка"
-                />
-                              <button
-                  type="button"
-                  class="showcase-item__basket-button button"
-                >
-                  В корзину
-                </button>
-                <button
-                  type="button"
-                  class="showcase-item__compare-button button-compare"
-                >
-                  Добавить к сравнению
-                </button>
-              </div>
-                <h3 class="showcase-item__title">Профессиональная селфи-палка</h3>
+                  <img
+                    class="showcase-item__image"
+                    src="img/item-2.jpg"
+                    width="360"
+                    height="380"
+                    alt="Профессиональная селфи-палка"
+                  />
+                  <button
+                    type="button"
+                    class="showcase-item__basket-button button"
+                  >
+                    В корзину
+                  </button>
+                  <button
+                    type="button"
+                    class="showcase-item__compare-button button-compare"
+                  >
+                    Добавить к сравнению
+                  </button>
+                </div>
+                <h3 class="showcase-item__title">
+                  Профессиональная селфи-палка
+                </h3>
                 <span class="showcase-item__price">1 500 руб.</span>
               </li>
-              <li class="showcase-item">
+              <li class="showcase-item" tabindex="0">
                 <div class="showcase-item__container">
-                <img
-                  class="showcase-item__image"
-                  src="img/item-3.jpg"
-                  width="360"
-                  height="380"
-                  alt="Непотопляемая селфи-палка"
-                />
-                <button
-                  type="button"
-                  class="showcase-item__basket-button button"
-                >
-                  В корзину
-                </button>
-                <button
-                  type="button"
-                  class="showcase-item__compare-button button-compare"
-                >
-                  Добавить к сравнению
-                </button>
-              </div>
+                  <img
+                    class="showcase-item__image"
+                    src="img/item-3.jpg"
+                    width="360"
+                    height="380"
+                    alt="Непотопляемая селфи-палка"
+                  />
+                  <button
+                    type="button"
+                    class="showcase-item__basket-button button"
+                  >
+                    В корзину
+                  </button>
+                  <button
+                    type="button"
+                    class="showcase-item__compare-button button-compare"
+                  >
+                    Добавить к сравнению
+                  </button>
+                </div>
                 <h3 class="showcase-item__title">Непотопляемая селфи-палка</h3>
                 <span class="showcase-item__price">2 500 руб.</span>
-                
               </li>
-              <li class="showcase-item showcase-item--new">
-              <div class="showcase-item__container">
-                <img
-                  class="showcase-item__image"
-                  src="img/item-4.jpg"
-                  width="360"
-                  height="380"
-                  alt="Селфи-палка «Следуй за мной»"
-                />
+              <li class="showcase-item showcase-item--new" tabindex="0">
+                <div class="showcase-item__container">
+                  <img
+                    class="showcase-item__image"
+                    src="img/item-4.jpg"
+                    width="360"
+                    height="380"
+                    alt="Селфи-палка «Следуй за мной»"
+                  />
                   <button
-                  type="button"
-                  class="showcase-item__basket-button button"
-                >
-                  В корзину
-                </button>
-                <button
-                  type="button"
-                  class="showcase-item__compare-button button-compare"
-                >
-                  Добавить к сравнению
-                </button>
-              </div>
-                <h3 class="showcase-item__title">Селфи-палка «Следуй за мной»</h3>
+                    type="button"
+                    class="showcase-item__basket-button button"
+                  >
+                    В корзину
+                  </button>
+                  <button
+                    type="button"
+                    class="showcase-item__compare-button button-compare"
+                  >
+                    Добавить к сравнению
+                  </button>
+                </div>
+                <h3 class="showcase-item__title">
+                  Селфи-палка «Следуй за мной»
+                </h3>
                 <span class="showcase-item__price">4 900 руб.</span>
-                
               </li>
             </ul>
             <div class="pagination">
-              <button class="pagination__button pagination__button--prev">Назад</button>
+              <button class="pagination__button pagination__button--prev">
+                Назад
+              </button>
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <button class="pagination__page-number pagination__page-number--active">1</button>
+                  <button
+                    class="pagination__page-number pagination__page-number--active"
+                  >
+                    1
+                  </button>
                 </li>
                 <li class="pagination__item">
                   <button class="pagination__page-number">2</button>
@@ -391,7 +417,9 @@
                   <button class="pagination__page-number">3</button>
                 </li>
               </ul>
-              <button class="pagination__button pagination__button--next">Вперед</button>
+              <button class="pagination__button pagination__button--next">
+                Вперед
+              </button>
             </div>
           </div>
         </div>
@@ -403,11 +431,12 @@
           <span class="footer-logo">
             <a class="footer-logo__link" href="index.html">
               <img
-              class="footer-logo__img"
-              src="img/logo-footer.svg"
-              width="167"
-              height="36"
-              alt="Логотип DEVICE" />
+                class="footer-logo__img"
+                src="img/logo-footer.svg"
+                width="167"
+                height="36"
+                alt="Логотип DEVICE"
+              />
             </a>
           </span>
           <ul class="footer-user-navigation">
