@@ -64,8 +64,8 @@
             <a class="main-nav__link catalog-categories__title" href="#"
               >Каталог товаров</a
             >
-            <ul class="catalog-categories__list">
-              <div class="catalog-categories__flex-container">
+            <div class="catalog-categories__list">
+              <ul class="catalog-categories__flex-container">
                 <li class="catalog-categories__category">
                   <a class="catalog-categories__link" href="#"
                     >Виртуальная реальность</a
@@ -79,8 +79,8 @@
                 <li class="catalog-categories__category">
                   <a class="catalog-categories__link" href="#">Экшн-камеры</a>
                 </li>
-              </div>
-              <div class="catalog-categories__flex-container">
+              </ul>
+              <ul class="catalog-categories__flex-container">
                 <li class="catalog-categories__category">
                   <a class="catalog-categories__link" href="#"
                     >Фитнес-браслеты</a
@@ -89,13 +89,13 @@
                 <li class="catalog-categories__category">
                   <a class="catalog-categories__link" href="#">Умные часы</a>
                 </li>
-              </div>
-              <div class="catalog-categories__flex-container">
+              </ul>
+              <ul class="catalog-categories__flex-container">
                 <li class="catalog-categories__category">
                   <a class="catalog-categories__link" href="#">Квадрокоптеры</a>
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Доставка</a>
@@ -264,10 +264,13 @@
             </ul>
             <div class="sort__order">
               <div
-                class="sort__order-button-up order--current"
+                class="sort__order-button sort__order-button--up sort__order-button--current"
                 tabindex="0"
               ></div>
-              <div class="sort__order-button-down" tabindex="0"></div>
+              <div
+                class="sort__order-button sort__order-button--down"
+                tabindex="0"
+              ></div>
             </div>
           </div>
           <div class="flex-wrapper">

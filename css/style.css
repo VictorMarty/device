@@ -538,6 +538,7 @@ Header, Footer
 .catalog-categories__title {
   display: inline-block;
   width: 255px;
+  vertical-align: baseline;
 }
 .catalog-categories__title:hover + .catalog-categories__list,
 .catalog-categories__list:hover {
@@ -551,7 +552,7 @@ Header, Footer
   display: -ms-flexbox;
   display: flex;
 }
-
+.catalog-categories__title:focus > .catalog-categories__list,
 .catalog-categories:hover > .catalog-categories__list::before {
   content: " ";
   position: absolute;
@@ -565,7 +566,17 @@ Header, Footer
 
 .catalog-categories__flex-container {
   padding-top: 15px;
+  padding-left: 0;
+  margin-right: 40px;
   width: 200px;
+}
+.catalog-categories__flex-container:nth-child(2) {
+  width: 160px;
+}
+.catalog-categories__category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-categories__link {
@@ -1045,7 +1056,7 @@ Footer
   position: absolute;
 }
 
-.service__controls {
+.services__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1063,7 +1074,7 @@ Footer
   margin-top: 80px;
 }
 
-.service__controls li {
+.services__controls li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1077,7 +1088,7 @@ Footer
   text-transform: uppercase;
 }
 
-.service__controls label {
+.services__controls label {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -1088,7 +1099,7 @@ Footer
   line-height: 38px;
 }
 
-.service__controls label::before {
+.services__controls label::before {
   content: " ";
   height: 8px;
   width: 100%;
@@ -1099,7 +1110,7 @@ Footer
   background-color: #f0c52e;
 }
 
-.service__controls label:hover::before {
+.services__controls label:hover::before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -1109,26 +1120,26 @@ Footer
   z-index: -1;
   background-color: #f0c52e;
 }
-#services-slide1:checked ~ .container > .service__controls li:nth-child(1),
-#services-slide2:checked ~ .container > .service__controls li:nth-child(2),
-#services-slide3:checked ~ .container > .service__controls li:nth-child(3) {
+#services-slide1:checked ~ .container > .services__controls li:nth-child(1),
+#services-slide2:checked ~ .container > .services__controls li:nth-child(2),
+#services-slide3:checked ~ .container > .services__controls li:nth-child(3) {
   background: #000000;
   color: #f0c52e;
 }
 
 #services-slide1:checked
   ~ .container
-  > .service__controls
+  > .services__controls
   li:nth-child(1)
   label:before,
 #services-slide2:checked
   ~ .container
-  > .service__controls
+  > .services__controls
   li:nth-child(2)
   label:before,
 #services-slide3:checked
   ~ .container
-  > .service__controls
+  > .services__controls
   li:nth-child(3)
   label:before {
   background: transparent;
@@ -1884,38 +1895,38 @@ Main страницы catalog
   width: 42px;
 }
 
-.sort__order-button-up,
-.sort__order-button-down {
+.sort__order-button--up,
+.sort__order-button--down {
   cursor: pointer;
   display: inline-block;
   width: 0;
   height: 0;
   opacity: 0.2;
 }
-.sort__order-button-up:hover,
-.sort__order-button-down:hover {
+.sort__order-button--up:hover,
+.sort__order-button--down:hover {
   opacity: 0.4;
 }
 
-.sort__order-button-up:active,
-.sort__order-button-down:active {
+.sort__order-button--up:active,
+.sort__order-button--down:active {
   opacity: 1;
 }
 
-.sort__order-button-up {
+.sort__order-button--up {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-bottom: 10px solid #000000;
 }
-.sort__order-button-down {
+.sort__order-button--down {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 10px solid #000000;
 }
 
-.sort__order .order--current,
-.sort__order .order--current:hover,
-.sort__order .order--current:active {
+.sort__order .sort__order-button--current,
+.sort__order .sort__order-button--current:hover,
+.sort__order .sort__order-button--current:active {
   opacity: 1;
 }
 
