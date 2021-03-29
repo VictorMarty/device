@@ -107,9 +107,25 @@
     <main class="main-content">
       <section class="promo container">
         <h2 class="promo__title visually-hidden">Промо товары</h2>
-        <input type="radio" name="promo-slider" id="promo-slide1" checked />
-        <input type="radio" name="promo-slider" id="promo-slide2" />
-        <input type="radio" name="promo-slider" id="promo-slide3" />
+        <input
+          class="promo__slider-input promo__slider-input--1"
+          type="radio"
+          name="promo-slider"
+          id="promo-slide1"
+          checked
+        />
+        <input
+          class="promo__slider-input promo__slider-input--2"
+          type="radio"
+          name="promo-slider"
+          id="promo-slide2"
+        />
+        <input
+          class="promo__slider-input promo__slider-input--3"
+          type="radio"
+          name="promo-slider"
+          id="promo-slide3"
+        />
         <ol class="promo-list">
           <li class="promo-item" data-index="01">
             <div class="promo-item__wrapper">
@@ -253,14 +269,25 @@
         </ul>
       </section>
       <section class="services">
-        <input type="radio" name="services-slider" id="services-slide1" />
         <input
+          class="services__slide-input services__slide-input--1"
+          type="radio"
+          name="services-slider"
+          id="services-slide1"
+        />
+        <input
+          class="services__slide-input services__slide-input--2"
           type="radio"
           name="services-slider"
           id="services-slide2"
           checked
         />
-        <input type="radio" name="services-slider" id="services-slide3" />
+        <input
+          class="services__slide-input services__slide-input--3"
+          type="radio"
+          name="services-slider"
+          id="services-slide3"
+        />
         <div class="container">
           <ul class="services__controls">
             <li>

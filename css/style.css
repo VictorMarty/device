@@ -844,15 +844,15 @@ Footer
 }
 
 .promo label:hover,
-#promo-slide1:checked ~ .promo__controls label:nth-of-type(1),
-#promo-slide2:checked ~ .promo__controls label:nth-of-type(2),
-#promo-slide3:checked ~ .promo__controls label:nth-of-type(3) {
+.promo__slider-input--1:checked ~ .promo__controls label:nth-of-type(1),
+.promo__slider-input--2:checked ~ .promo__controls label:nth-of-type(2),
+.promo__slider-input--3:checked ~ .promo__controls label:nth-of-type(3) {
   border-color: #000000;
 }
 
-#promo-slide1:checked ~ .promo-list > .promo-item:nth-child(1),
-#promo-slide2:checked ~ .promo-list > .promo-item:nth-child(2),
-#promo-slide3:checked ~ .promo-list > .promo-item:nth-child(3) {
+.promo__slider-input--1:checked ~ .promo-list > .promo-item:nth-child(1),
+.promo__slider-input--2:checked ~ .promo-list > .promo-item:nth-child(2),
+.promo__slider-input--3:checked ~ .promo-list > .promo-item:nth-child(3) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1120,24 +1120,33 @@ Footer
   z-index: -1;
   background-color: #f0c52e;
 }
-#services-slide1:checked ~ .container > .services__controls li:nth-child(1),
-#services-slide2:checked ~ .container > .services__controls li:nth-child(2),
-#services-slide3:checked ~ .container > .services__controls li:nth-child(3) {
+.services__slide-input--1:checked
+  ~ .container
+  > .services__controls
+  li:nth-child(1),
+.services__slide-input--2:checked
+  ~ .container
+  > .services__controls
+  li:nth-child(2),
+.services__slide-input--3:checked
+  ~ .container
+  > .services__controls
+  li:nth-child(3) {
   background: #000000;
   color: #f0c52e;
 }
 
-#services-slide1:checked
+.services__slide-input--1:checked
   ~ .container
   > .services__controls
   li:nth-child(1)
   label:before,
-#services-slide2:checked
+.services__slide-input--2:checked
   ~ .container
   > .services__controls
   li:nth-child(2)
   label:before,
-#services-slide3:checked
+.services__slide-input--3:checked
   ~ .container
   > .services__controls
   li:nth-child(3)
@@ -1145,15 +1154,15 @@ Footer
   background: transparent;
 }
 
-#services-slide1:checked
+.services__slide-input--1:checked
   ~ .container
   .services-list
   > .services-list-item:nth-child(1),
-#services-slide2:checked
+.services__slide-input--2:checked
   ~ .container
   .services-list
   > .services-list-item:nth-child(2),
-#services-slide3:checked
+.services__slide-input--3:checked
   ~ .container
   .services-list
   > .services-list-item:nth-child(3) {
