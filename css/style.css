@@ -74,6 +74,7 @@ img {
   margin: 0;
   min-width: 200px;
   display: inline-block;
+  vertical-align: baseline;
   z-index: 1;
   font-size: 18px;
   line-height: 36px;
@@ -643,6 +644,7 @@ Footer
   font-size: 15px;
   font-weight: 300;
   line-height: 18px;
+  vertical-align: baseline;
 }
 .footer-telephone {
   text-align: right;
@@ -935,6 +937,7 @@ Footer
 }
 .popular-list__link::before {
   display: inline-block;
+  vertical-align: baseline;
   content: " ";
   width: 160px;
   height: 160px;
@@ -1057,6 +1060,7 @@ Footer
 
 .services__controls label {
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   cursor: pointer;
   width: 160px;
@@ -1875,6 +1879,7 @@ Main страницы catalog
 .sort__order-button--down {
   cursor: pointer;
   display: inline-block;
+  vertical-align: baseline;
   width: 0;
   height: 0;
   opacity: 0.2;
