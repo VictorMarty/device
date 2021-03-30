@@ -1329,7 +1329,7 @@ Footer
 .map-popup {
   position: fixed;
   top: 20%;
-  left: 430px;
+  left: calc(25%);
   display: block;
   width: 960px;
   height: 555px;
@@ -1451,7 +1451,9 @@ Footer
 .map-popup__button:active {
   background: #faedc0;
 }
-
+.map-popup__map {
+  position: absolute;
+}
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: translateY(-2000px);
