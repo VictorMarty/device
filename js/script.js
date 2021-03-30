@@ -7,6 +7,11 @@ let mapPopup = document.querySelector(".map-popup");
 let closeMapPopupButton = mapPopup.querySelector(
   ".map-popup__button--close-button"
 );
+
+let inputName = form.querySelector("#write-us-form__name-input");
+let inputEmail = form.querySelector("#write-us-form__email-input");
+let inputText = form.querySelector("#write-us-form__textarea-input");
+
 contactButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   writeUs.classList.add("popup-show");
@@ -38,6 +43,16 @@ window.addEventListener("keydown", function (evt) {
     }
     if (mapPopup.classList.contains("popup-show")) {
       mapPopup.classList.remove("popup-show");
+      writeUs.classList.remove("popup-error");
     }
+  }
+});
+
+form.addEventListener("submit", function (e) {
+  if (!inputName.value || !inputEmail.value || !inputText.value) {
+    e.preventDefault();
+    writeUs.classList.remove("popup-error");
+    writeUs.offsetWidth = writeUs.offsetWidth;
+    writeUs.classList.add("popup-error");
   }
 });

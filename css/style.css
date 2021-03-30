@@ -1406,6 +1406,7 @@ Footer
 }
 
 .write-us-form__input:disabled,
+.write-us-form__input:invalid,
 .write-us textarea:disabled {
   background: #f6dada;
 }
@@ -1498,12 +1499,65 @@ Footer
   }
 }
 
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateY(-2%);
+    transform: translateY(-1%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateY(2%);
+    transform: translateY(2%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateY(-2%);
+    transform: translateY(-2%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateY(2%);
+    transform: translateY(2%);
+  }
+}
+
 .popup-show {
   display: block;
   -webkit-animation: bounce 0.6s;
   animation: bounce 0.6s;
 }
-
+.popup-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
 /*
 Main страницы catalog
 */
