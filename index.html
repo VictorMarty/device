@@ -2,21 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Магазин современной техники Девайс</title>
   </head>
   <body>
     <header class="main-header container">
       <h1 class="main-header__title visually-hidden">Магазин Девайс</h1>
-      <a class="header-logo" href="index.html"
-        ><img
-          class="header-logo__img"
-          src="img/logo.svg"
-          width="164"
-          height="36"
-          alt="Логотип DEVICE"
-      /></a>
+      <img
+        class="header-logo__img header-logo"
+        src="img/logo.svg"
+        width="164"
+        height="36"
+        alt="Логотип DEVICE"
+      />
       <form
         class="site-search"
         action="https://echo.htmlacademy.ru"
@@ -424,9 +423,9 @@
               height="222"
             />
           </button>
-          <button class="contacts__button button" type="button">
+          <a class="contacts__button button" type="button" href="writeus.html">
             Напишите нам
-          </button>
+          </a>
         </section>
       </div>
     </main>
@@ -594,6 +593,6 @@
         Закрыть карту
       </button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

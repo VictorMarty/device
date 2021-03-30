@@ -113,6 +113,7 @@ img {
 
 .button:active {
   color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .container {
@@ -169,6 +170,11 @@ Header, Footer
   opacity: 0.3;
 }
 
+.header-logo__img.header-logo:hover,
+.header-logo__img.header-logo:active {
+  opacity: 1;
+}
+
 .site-search {
   position: relative;
   width: 520px;
@@ -209,8 +215,10 @@ Header, Footer
 .site-search__input::-moz-placeholder,
 .site-search__input:-ms-input-placeholder,
 .site-search__input::-ms-input-placeholder,
-.site-search__input::placeholder,
-.site-search__input:hover::-webkit-input-placeholder {
+.site-search__input::placeholder {
+  opacity: 0.6;
+}
+.site-search__input::placeholder {
   opacity: 0.6;
 }
 
@@ -218,7 +226,10 @@ Header, Footer
 .site-search__input:hover:-ms-input-placeholder,
 .site-search__input:hover::-ms-input-placeholder,
 .site-search__input:hover::placeholder {
-  opacity: 0.6;
+  opacity: 1;
+}
+.site-search__input:hover::placeholder {
+  opacity: 1;
 }
 
 .site-search__button {
@@ -272,8 +283,7 @@ Header, Footer
 
 .site-search__input:focus ~ .site-search__button:active,
 .site-search__button:active {
-  opacity: 0.6;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
   background-color: #000000;
 }
 
@@ -549,7 +559,7 @@ Header, Footer
 
 .catalog-categories__link {
   font-size: 15px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   color: rgb(0, 0, 0);
   line-height: 36px;
   font-weight: 300;
@@ -950,7 +960,9 @@ Footer
 .popular-list__link:hover::before {
   background-color: #f0c52e;
 }
-/* FIXME: opacity нужно применять только к изображению, а не к фону */
+.popular-list__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 .popular-list__link:active::before {
   opacity: 0.3;
 }
@@ -1612,7 +1624,10 @@ Main страницы catalog
 .breadcrumbs__path:active {
   opacity: 0.1;
 }
-
+.breadcrumbs__path.current:hover,
+.breadcrumbs__path.current:active {
+  opacity: 0.3;
+}
 .breadcrumbs__link:not(.current)::before {
   content: " ";
   width: 4px;
@@ -1848,7 +1863,10 @@ Main страницы catalog
 .filter-form__radiobutton:focus + .filter-form__label {
   outline: 1px solid #212121;
 }
-
+.filter-form__checkbox:disabled + .filter-form__label,
+.filter-form__radiobutton:disabled + .filter-form__label {
+  opacity: 0.6;
+}
 .filter-form__submit-button {
   margin-top: 35px;
   margin-left: 60px;
