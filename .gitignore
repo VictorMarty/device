@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.prettierrc
 *.ai
 *.log
 *.pdf
@@ -8,3 +9,5 @@
 node_modules/
 npm-debug.*
 Thumbs.db
+
+Source/
